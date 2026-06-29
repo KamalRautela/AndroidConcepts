@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Text16BoldStyle">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Text16SemiBoldStyle">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Text16MediumStyle">
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Text16LightStyle">
+        <item name="android:fontFamily">@font/opensans_light</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Text16RegularStyle">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Text16ItalicStyle">
+        <item name="android:fontFamily">@font/opensans_italic</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Text20BoldStyle" parent="Text16BoldStyle">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="Text20SemiBoldStyle" parent="Text16SemiBoldStyle">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="Text20MediumStyle" parent="Text16MediumStyle">
+        <item name="android:fontFamily">@font/opensans_italic</item>
+        <item name="android:textColor">@color/white_FFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="CircleShape" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>
