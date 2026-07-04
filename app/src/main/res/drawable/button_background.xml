@@ -2,14 +2,14 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
         android:angle="135"
-        android:centerColor="#FFFFC107"
-        android:endColor="#FFFFEB3B"
-        android:startColor="#FFFF9800"
-        android:type="linear" />
+        android:startColor="@color/blue_0099CC"
+        android:centerColor="@color/blue_00C6FF"
+        android:endColor="@color/blue_0099CC"
+        android:type="linear"/>
 
     <!-- Button polish -->
     <corners android:radius="@dimen/spacing_12" />
     <stroke
         android:width="@dimen/spacing_2"
-        android:color="@color/orange_FF9800" />
+        android:color="@color/blue_0099CC" />
 </shape>
