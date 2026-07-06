@@ -7,27 +7,26 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.androidconcepts.common.TOPICS
 import com.example.androidconcepts.common.ConceptAdapter
+import com.example.androidconcepts.common.UiBASICS
 import com.example.androidconcepts.common.setDynamicSpacing
-import com.example.androidconcepts.databinding.ActivityTopicOptionsBinding
+import com.example.androidconcepts.databinding.ActivityUibasicsBinding
+import com.example.androidconcepts.ui_basics.TextViewActivity
 
-class TopicOptionsActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityTopicOptionsBinding
+class UIBasicsActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityUibasicsBinding
     private lateinit var conceptAdapter: ConceptAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityTopicOptionsBinding.inflate(layoutInflater)
+        binding = ActivityUibasicsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setEdgeToEdge()
         bindUi()
     }
-
     private fun setEdgeToEdge() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -38,10 +37,10 @@ class TopicOptionsActivity : AppCompatActivity() {
 
     private fun bindUi() = with(binding) {
         recyclerViewProjects.apply {
-            conceptAdapter = ConceptAdapter(concepts = TOPICS.entries, onOptionClicked = {
-                topicId -> navigateToTopic(topicId)
+            conceptAdapter = ConceptAdapter(concepts = UiBASICS.entries, onOptionClicked = {
+                    topicId -> navigateToTopic(topicId)
             })
-            layoutManager = GridLayoutManager(this@TopicOptionsActivity,2)
+            layoutManager = GridLayoutManager(this@UIBasicsActivity,2)
             setHasFixedSize(true)
             val spacing = resources.getDimensionPixelSize(R.dimen.spacing_8)
             setDynamicSpacing(spacing)
@@ -51,7 +50,7 @@ class TopicOptionsActivity : AppCompatActivity() {
 
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
-            TOPICS.UI_BASICS.topicId -> startActivity(Intent(this, UIBasicsActivity::class.java))
+            UiBASICS.TEXT_VIEW.topicId -> startActivity(Intent(this, TextViewActivity::class.java))
         }
     }
 }

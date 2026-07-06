@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">AndroidConcepts</string>
     <string name="welcome_to_my_android_concepts">Welcome To\nMy Android Concepts</string>
+    <string name="ui_basics">UI Basics</string>
+
+    <!-- UI Basics Topics -->
+    <string name="text_view">TextView</string>
+    <string name="button">Button</string>
+    <string name="image_view">ImageView</string>
+    <string name="edit_text">EditText</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="radio_button">RadioButton</string>
+    <string name="switch_toggle">Switch</string>
+    <string name="progress_bar">ProgressBar</string>
+    <string name="linear_layout">LinearLayout</string>
+    <string name="relative_layout">RelativeLayout</string>
+    <string name="constraint_layout">ConstraintLayout</string>
+    <string name="frame_layout">FrameLayout</string>
+    <string name="recycler_view">RecyclerView</string>
+    <string name="scroll_view">ScrollView</string>
+    <string name="card_view">CardView</string>
+    <string name="fab">FAB</string>
+    <string name="snackbar_toast">Snackbar &amp; Toast</string>
+    <string name="alert_dialog">AlertDialog</string>
+    <string name="bottom_navigation">BottomNavigation</string>
+    <string name="glide_coil">Glide / Coil</string>
+
 </resources>
