@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".ui_basics.TextViewActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -28,6 +25,12 @@
             android:exported="false" />
         <activity
             android:name=".UIBasicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui_basics.ButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui_basics.TextViewActivity"
             android:exported="false" />
     </application>
 

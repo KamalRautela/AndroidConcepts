@@ -8,6 +8,18 @@
     android:background="@drawable/app_background"
     tools:context=".UIBasicsActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="@string/ui_basics"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProjects"
         android:layout_width="0dp"
@@ -19,7 +31,7 @@
         tools:itemCount="22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         tools:listitem="@layout/item_concept" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

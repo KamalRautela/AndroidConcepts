@@ -11,6 +11,7 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.UiBASICS
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityUibasicsBinding
+import com.example.androidconcepts.ui_basics.ButtonActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
 
 class UIBasicsActivity : AppCompatActivity() {
@@ -25,6 +26,9 @@ class UIBasicsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setEdgeToEdge()
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
         bindUi()
     }
     private fun setEdgeToEdge() {
@@ -51,6 +55,7 @@ class UIBasicsActivity : AppCompatActivity() {
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
             UiBASICS.TEXT_VIEW.topicId -> startActivity(Intent(this, TextViewActivity::class.java))
+            UiBASICS.BUTTON.topicId -> startActivity(Intent(this, ButtonActivity::class.java))
         }
     }
 }

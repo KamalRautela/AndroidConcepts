@@ -21,6 +21,9 @@ class TextViewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setEdgeToEdge()
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
         bindUi()
     }
     private fun setEdgeToEdge() {
