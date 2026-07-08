@@ -1,6 +1,7 @@
 package com.example.androidconcepts.ui_basics
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +12,11 @@ import com.example.androidconcepts.databinding.ActivityEditTextBinding
 
 class EditTextActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditTextBinding
+    private val allButtons by lazy {
+        with(binding) {
+        listOf(btnTypeText, btnTypeNumber, btnTypeEmail, btnTypePassword, btnTypePhone)
+    }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,31 +31,40 @@ class EditTextActivity : AppCompatActivity() {
 
         bindUi()
     }
-    private fun bindUi() {
-        binding.editTextMain.addTextChangedListener {
-            binding.tvLivePreview.text = if (it.isNullOrBlank()) "Start Typing Above" else "You Typed $it"
+    private fun bindUi() = with(binding) {
+
+        // Default selected
+        selectTypeBtn(btnTypeText)
+
+        editTextMain.addTextChangedListener {
+            tvLivePreview.text = if (it.isNullOrBlank()) "Start Typing Above" else "You Typed $it"
         }
 
-        binding.btnTypeText.setOnClickListener {
-            binding.editTextMain.inputType = android.text.InputType.TYPE_CLASS_TEXT
-            binding.textInputLayout.hint = "Enter Text"
+        btnTypeText.setOnClickListener {
+            editTextMain.inputType = android.text.InputType.TYPE_CLASS_TEXT
+            textInputLayout.hint = "Enter Text"
+            selectTypeBtn(btnTypeText)
         }
-        binding.btnTypeNumber.setOnClickListener {
-            binding.editTextMain.inputType = android.text.InputType.TYPE_CLASS_NUMBER
-            binding.textInputLayout.hint = "Enter Number"
+        btnTypeNumber.setOnClickListener {
+            editTextMain.inputType = android.text.InputType.TYPE_CLASS_NUMBER
+            textInputLayout.hint = "Enter Number"
+            selectTypeBtn(btnTypeNumber)
         }
-        binding.btnTypeEmail.setOnClickListener {
-            binding.editTextMain.inputType = android.text.InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
-            binding.textInputLayout.hint = "Enter Email"
+        btnTypeEmail.setOnClickListener {
+            editTextMain.inputType = android.text.InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
+            textInputLayout.hint = "Enter Email"
+            selectTypeBtn(btnTypeEmail)
         }
-        binding.btnTypePhone.setOnClickListener {
-            binding.editTextMain.inputType = android.text.InputType.TYPE_CLASS_PHONE
-            binding.textInputLayout.hint = "Enter Phone Number"
+        btnTypePhone.setOnClickListener {
+            editTextMain.inputType = android.text.InputType.TYPE_CLASS_PHONE
+            textInputLayout.hint = "Enter Phone Number"
+            selectTypeBtn(btnTypePhone)
         }
-        binding.btnTypePassword.setOnClickListener {
-            binding.editTextMain.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+        btnTypePassword.setOnClickListener {
+            editTextMain.inputType = android.text.InputType.TYPE_CLASS_TEXT or
                     android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
-            binding.textInputLayout.hint = "Enter Password"
+            textInputLayout.hint = "Enter Password"
+            selectTypeBtn(btnTypePassword)
         }
 
         binding.btnValidate.setOnClickListener {
@@ -77,5 +92,17 @@ class EditTextActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
+    }
+
+    private fun selectTypeBtn(selected: Button) {
+        allButtons.forEach { btn ->
+            if (btn == selected) {
+                btn.backgroundTintList = android.content.res.ColorStateList.valueOf(getColor(R.color.blue_0099CC))
+                btn.setTextColor(getColor(R.color.black_080D14))
+            } else {
+                btn.backgroundTintList = android.content.res.ColorStateList.valueOf(android.graphics.Color.TRANSPARENT)
+                btn.setTextColor(getColor(R.color.blue_0099CC))
+            }
+        }
     }
 }
