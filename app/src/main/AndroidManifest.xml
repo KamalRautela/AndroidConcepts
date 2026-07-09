@@ -45,6 +45,10 @@
         <activity
             android:name=".ui_basics.RadioButtonActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui_basics.SwitchActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
