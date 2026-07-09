@@ -49,6 +49,7 @@ class CheckBoxActivity : AppCompatActivity() {
         }
 
         binding.btnSelectAll.setOnClickListener {
+            selectTypeButton(binding.btnSelectAll)
             checkBoxList.forEach {
                 it.isChecked = true
             }
@@ -56,6 +57,7 @@ class CheckBoxActivity : AppCompatActivity() {
         }
 
         binding.btnDeselectAll.setOnClickListener {
+            selectTypeButton(binding.btnDeselectAll)
             checkBoxList.forEach {
                 it.isChecked = false
             }

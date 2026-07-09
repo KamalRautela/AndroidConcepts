@@ -42,6 +42,9 @@
         <activity
             android:name=".ui_basics.CheckBoxActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui_basics.RadioButtonActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

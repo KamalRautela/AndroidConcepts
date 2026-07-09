@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.RadioButtonActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="RadioButton"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- BASIC RADIO BUTTON -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic RadioButton"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <RadioButton
+                android:id="@+id/radioButtonBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accept terms &amp; conditions"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/white_FFFFFF"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBasicState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State: Unselected"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:layout_marginBottom="@dimen/spacing_24" />
+
+            <!-- RADIO GROUP -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioGroup — Select Level"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/spacing_16">
+
+                <RadioButton
+                    android:id="@+id/rbBeginner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beginner"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/white_FFFFFF"
+                    android:padding="@dimen/spacing_8" />
+
+                <RadioButton
+                    android:id="@+id/rbIntermediate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Intermediate"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/white_FFFFFF"
+                    android:padding="@dimen/spacing_8" />
+
+                <RadioButton
+                    android:id="@+id/rbAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Advanced"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/white_FFFFFF"
+                    android:padding="@dimen/spacing_8" />
+
+                <RadioButton
+                    android:id="@+id/rbExpert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expert"
+                    tools:ignore="HardcodedText"
+                    android:textColor="@color/white_FFFFFF"
+                    android:padding="@dimen/spacing_8" />
+
+            </RadioGroup>
+
+            <!-- SUBMIT -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_8"
+                tools:ignore="HardcodedText"
+                android:text="Submit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_12"
+                android:background="@color/blue_0D1B2A"
+                android:textColor="@color/blue_7EC8E3"
+                android:visibility="gone"
+                android:text="" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
