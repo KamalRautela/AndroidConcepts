@@ -48,7 +48,9 @@
         <activity
             android:name=".ui_basics.SwitchActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".ui_basics.ProgressBarActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
