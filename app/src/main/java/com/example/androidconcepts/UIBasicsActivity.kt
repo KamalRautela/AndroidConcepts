@@ -12,6 +12,7 @@ import com.example.androidconcepts.common.UiBASICS
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityUibasicsBinding
 import com.example.androidconcepts.ui_basics.ButtonActivity
+import com.example.androidconcepts.ui_basics.CheckBoxActivity
 import com.example.androidconcepts.ui_basics.EditTextActivity
 import com.example.androidconcepts.ui_basics.ImageViewActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
@@ -60,6 +61,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.BUTTON.topicId -> startActivity(Intent(this, ButtonActivity::class.java))
             UiBASICS.IMAGE_VIEW.topicId -> startActivity(Intent(this, ImageViewActivity::class.java))
             UiBASICS.EDIT_TEXT.topicId -> startActivity(Intent(this, EditTextActivity::class.java))
+            UiBASICS.CHECKBOX.topicId -> startActivity(Intent(this, CheckBoxActivity::class.java))
         }
     }
 }

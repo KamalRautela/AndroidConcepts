@@ -39,6 +39,9 @@
         <activity
             android:name=".ui_basics.EditTextActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui_basics.CheckBoxActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
