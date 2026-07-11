@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.ConstraintLayoutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="ConstraintLayout"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- BASIC CONSTRAINTS -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Constraints"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/blue_0D1B2A"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/viewTopStart"
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="top|start"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_margin="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="top|end"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="60dp"
+                    android:layout_height="32dp"
+                    android:text="center"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="bot|start"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_margin="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="bot|end"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/spacing_8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- CHAINS -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chains"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <!-- spread -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="spread"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="@dimen/spacing_4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/blue_0D1B2A"
+                android:layout_marginBottom="@dimen/spacing_8">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/chainA"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/chainB"
+                    app:layout_constraintHorizontal_chainStyle="spread" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/chainB"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="B"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/chainA"
+                    app:layout_constraintEnd_toStartOf="@id/chainC" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/chainC"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="C"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/chainB"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- packed -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="packed"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="@dimen/spacing_4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/blue_0D1B2A"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/packedA"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/packedB"
+                    app:layout_constraintHorizontal_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/packedB"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="B"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/packedA"
+                    app:layout_constraintEnd_toStartOf="@id/packedC" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/packedC"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="C"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/packedB"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- BIAS -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horizontal Bias"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/blue_0D1B2A"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="bias=0.25"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- GUIDELINE -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guideline (50%)"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/blue_0D1B2A">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:text="Left"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline"
+                    android:layout_marginEnd="@dimen/spacing_4" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:text="Right"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="@dimen/spacing_4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

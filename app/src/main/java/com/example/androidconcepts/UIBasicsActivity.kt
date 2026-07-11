@@ -13,6 +13,7 @@ import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityUibasicsBinding
 import com.example.androidconcepts.ui_basics.ButtonActivity
 import com.example.androidconcepts.ui_basics.CheckBoxActivity
+import com.example.androidconcepts.ui_basics.ConstraintLayoutActivity
 import com.example.androidconcepts.ui_basics.EditTextActivity
 import com.example.androidconcepts.ui_basics.ImageViewActivity
 import com.example.androidconcepts.ui_basics.LinearLayoutActivity
@@ -72,6 +73,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.PROGRESS_BAR.topicId -> startActivity(Intent(this, ProgressBarActivity::class.java))
             UiBASICS.LINEAR_LAYOUT.topicId -> startActivity(Intent(this, LinearLayoutActivity::class.java))
             UiBASICS.RELATIVE_LAYOUT.topicId -> startActivity(Intent(this, RelativeLayoutActivity::class.java))
+            UiBASICS.CONSTRAINT_LAYOUT.topicId -> startActivity(Intent(this, ConstraintLayoutActivity::class.java))
         }
     }
 }

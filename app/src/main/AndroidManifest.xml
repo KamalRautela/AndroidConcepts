@@ -57,6 +57,9 @@
         <activity
             android:name=".ui_basics.RelativeLayoutActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui_basics.ConstraintLayoutActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
