@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.LinearLayoutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="LinearLayout"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- VERTICAL -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vertical Orientation"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_12"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="View A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_marginBottom="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="View B"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_marginBottom="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="View C"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3" />
+
+            </LinearLayout>
+
+            <!-- HORIZONTAL -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horizontal Orientation"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_12"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_marginEnd="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="B"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_marginEnd="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="C"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3" />
+
+            </LinearLayout>
+
+            <!-- WEIGHT -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="layout_weight  (1 : 2 : 3)"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_12"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="1"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_marginEnd="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:text="2"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_marginEnd="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:text="3"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3" />
+
+            </LinearLayout>
+
+            <!-- GRAVITY vs LAYOUT_GRAVITY -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="layout_gravity — view ki position"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_12">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="start"
+                    android:text="start"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_marginBottom="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:text="center"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_marginBottom="@dimen/spacing_6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="end"
+                    android:text="end"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

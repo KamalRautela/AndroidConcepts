@@ -15,6 +15,7 @@ import com.example.androidconcepts.ui_basics.ButtonActivity
 import com.example.androidconcepts.ui_basics.CheckBoxActivity
 import com.example.androidconcepts.ui_basics.EditTextActivity
 import com.example.androidconcepts.ui_basics.ImageViewActivity
+import com.example.androidconcepts.ui_basics.LinearLayoutActivity
 import com.example.androidconcepts.ui_basics.ProgressBarActivity
 import com.example.androidconcepts.ui_basics.RadioButtonActivity
 import com.example.androidconcepts.ui_basics.SwitchActivity
@@ -68,6 +69,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.RADIO_BUTTON.topicId -> startActivity(Intent(this, RadioButtonActivity::class.java))
             UiBASICS.SWITCH.topicId -> startActivity(Intent(this, SwitchActivity::class.java))
             UiBASICS.PROGRESS_BAR.topicId -> startActivity(Intent(this, ProgressBarActivity::class.java))
+            UiBASICS.LINEAR_LAYOUT.topicId -> startActivity(Intent(this, LinearLayoutActivity::class.java))
         }
     }
 }
