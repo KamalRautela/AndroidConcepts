@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.FrameLayoutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="FrameLayout"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- STACKING -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stacking — Z Order"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/blue_0D1B2A"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:text="1st (bottom)"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/blue_0099CC"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_1B3A5C"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_margin="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:text="2nd"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/blue_00C6FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_1B3A5C"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:text="3rd (top)"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/blue_7EC8E3"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_1B3A5C"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_margin="@dimen/spacing_8" />
+
+            </FrameLayout>
+
+            <!-- LOADING OVERLAY -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading Overlay"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16"
+                    android:background="@color/blue_0D1B2A">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Profile"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name: Kamal Rautela"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Role: Android Developer"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <!-- Overlay — on top -->
+                <LinearLayout
+                    android:id="@+id/loadingOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#CC080D14"
+                    android:visibility="visible"
+                    android:padding="@dimen/spacing_16">
+
+                    <ProgressBar
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginBottom="@dimen/spacing_8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleOverlay"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toggle Loading"
+                tools:ignore="HardcodedText"
+                android:layout_marginBottom="@dimen/spacing_24" />
+
+            <!-- IMAGE + TEXT OVERLAY -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image + Text Overlay"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@color/blue_1B3A5C"
+                    android:src="@drawable/ic_launcher_background"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:background="#99080D14"
+                    android:padding="@dimen/spacing_12">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kedarnath Trek"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uttarakhand, India"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

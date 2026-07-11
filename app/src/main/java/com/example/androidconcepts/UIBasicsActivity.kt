@@ -15,6 +15,7 @@ import com.example.androidconcepts.ui_basics.ButtonActivity
 import com.example.androidconcepts.ui_basics.CheckBoxActivity
 import com.example.androidconcepts.ui_basics.ConstraintLayoutActivity
 import com.example.androidconcepts.ui_basics.EditTextActivity
+import com.example.androidconcepts.ui_basics.FrameLayoutActivity
 import com.example.androidconcepts.ui_basics.ImageViewActivity
 import com.example.androidconcepts.ui_basics.LinearLayoutActivity
 import com.example.androidconcepts.ui_basics.ProgressBarActivity
@@ -74,6 +75,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.LINEAR_LAYOUT.topicId -> startActivity(Intent(this, LinearLayoutActivity::class.java))
             UiBASICS.RELATIVE_LAYOUT.topicId -> startActivity(Intent(this, RelativeLayoutActivity::class.java))
             UiBASICS.CONSTRAINT_LAYOUT.topicId -> startActivity(Intent(this, ConstraintLayoutActivity::class.java))
+            UiBASICS.FRAME_LAYOUT.topicId -> startActivity(Intent(this, FrameLayoutActivity::class.java))
         }
     }
 }
