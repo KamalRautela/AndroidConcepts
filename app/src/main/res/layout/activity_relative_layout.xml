@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.RelativeLayoutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="RelativeLayout"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- ALIGN PARENT -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alignParent — corners"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_8"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="top|start"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:text="top|end"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="72dp"
+                    android:layout_height="36dp"
+                    android:text="center"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    android:layout_centerInParent="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="bottom|start"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="bottom|end"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <!-- BELOW / toEndOf -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="below + toEndOf"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_8"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/viewRef"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="View A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="toEndOf A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_00C6FF"
+                    android:layout_toEndOf="@id/viewRef"
+                    android:layout_marginStart="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="below A"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    android:layout_below="@id/viewRef"
+                    android:layout_marginTop="@dimen/spacing_8" />
+
+            </RelativeLayout>
+
+            <!-- CENTER HORIZONTAL / VERTICAL -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="centerHorizontal + centerVertical"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_0D1B2A"
+                android:padding="@dimen/spacing_8">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:text="centerHorizontal"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_0099CC"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="36dp"
+                    android:text="centerVertical"
+                    tools:ignore="HardcodedText"
+                    android:gravity="center"
+                    android:textColor="@color/black_080D14"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_7EC8E3"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,7 @@ import com.example.androidconcepts.ui_basics.ImageViewActivity
 import com.example.androidconcepts.ui_basics.LinearLayoutActivity
 import com.example.androidconcepts.ui_basics.ProgressBarActivity
 import com.example.androidconcepts.ui_basics.RadioButtonActivity
+import com.example.androidconcepts.ui_basics.RelativeLayoutActivity
 import com.example.androidconcepts.ui_basics.SwitchActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
 
@@ -70,6 +71,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.SWITCH.topicId -> startActivity(Intent(this, SwitchActivity::class.java))
             UiBASICS.PROGRESS_BAR.topicId -> startActivity(Intent(this, ProgressBarActivity::class.java))
             UiBASICS.LINEAR_LAYOUT.topicId -> startActivity(Intent(this, LinearLayoutActivity::class.java))
+            UiBASICS.RELATIVE_LAYOUT.topicId -> startActivity(Intent(this, RelativeLayoutActivity::class.java))
         }
     }
 }
