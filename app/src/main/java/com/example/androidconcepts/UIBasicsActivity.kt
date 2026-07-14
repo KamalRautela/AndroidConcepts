@@ -12,6 +12,7 @@ import com.example.androidconcepts.common.UiBASICS
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityUibasicsBinding
 import com.example.androidconcepts.ui_basics.ButtonActivity
+import com.example.androidconcepts.ui_basics.CardViewActivity
 import com.example.androidconcepts.ui_basics.CheckBoxActivity
 import com.example.androidconcepts.ui_basics.ConstraintLayoutActivity
 import com.example.androidconcepts.ui_basics.EditTextActivity
@@ -80,6 +81,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.FRAME_LAYOUT.topicId -> startActivity(Intent(this, FrameLayoutActivity::class.java))
             UiBASICS.RECYCLER_VIEW.topicId -> startActivity(Intent(this, RecyclerViewActivity::class.java))
             UiBASICS.SCROLL_VIEW.topicId -> startActivity(Intent(this, ScrollViewActivity::class.java))
+            UiBASICS.CARD_VIEW.topicId -> startActivity(Intent(this, CardViewActivity::class.java))
         }
     }
 }

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.CardViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="CardView"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Section: Basic Card -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Card"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MaterialCardView"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Background color aur corner radius ke saath basic card."
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:layout_marginTop="@dimen/spacing_4" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Elevation vs Stroke -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elevation vs Stroke"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_8"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elevation Card"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cardElevation=8dp — shadow dikhta hai neeche"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:layout_marginTop="@dimen/spacing_4" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="2dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stroke Card"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="strokeWidth=2dp + strokeColor — border dikhta hai"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:layout_marginTop="@dimen/spacing_4" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Card with Image -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card with Image"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/blue_1B3A5C"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_12">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Android Development"
+                            android:textColor="@color/white_FFFFFF"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CardView corner radius ImageView ko bhi clip karta hai."
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_12"
+                            android:layout_marginTop="@dimen/spacing_4" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Corner Radius -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corner Radius Variants"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="@dimen/spacing_16">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_6"
+                    app:cardBackgroundColor="@color/blue_0D1B2A"
+                    app:cardCornerRadius="0dp"
+                    app:strokeColor="@color/blue_1B3A5C"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_6"
+                    app:cardBackgroundColor="@color/blue_0D1B2A"
+                    app:cardCornerRadius="8dp"
+                    app:strokeColor="@color/blue_1B3A5C"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_6"
+                    app:cardBackgroundColor="@color/blue_0D1B2A"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="@color/blue_1B3A5C"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/blue_0D1B2A"
+                    app:cardCornerRadius="50dp"
+                    app:strokeColor="@color/blue_1B3A5C"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+
+            <!-- Section: Clickable Card -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clickable Card"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardClickable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_8"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp"
+                app:rippleColor="@color/blue_0099CC">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/spacing_12">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/black_080D14"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold"
+                        android:background="@color/blue_0099CC"
+                        android:layout_marginEnd="@dimen/spacing_12" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Click karo — ripple effect dekhna"
+                            android:textColor="@color/white_FFFFFF"
+                            android:textSize="13sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvClickCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 clicks"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_12"
+                            android:layout_marginTop="@dimen/spacing_2" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_20" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Key attributes note -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Key Attributes"
+                        android:textColor="@color/blue_00C6FF"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cardBackgroundColor → background\ncardCornerRadius → corners\ncardElevation → shadow\nstrokeColor + strokeWidth → border\nrippleColor → click effect"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:layout_marginTop="@dimen/spacing_6"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
