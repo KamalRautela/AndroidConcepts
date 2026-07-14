@@ -26,6 +26,7 @@ import com.example.androidconcepts.ui_basics.RelativeLayoutActivity
 import com.example.androidconcepts.ui_basics.ScrollViewActivity
 import com.example.androidconcepts.ui_basics.SwitchActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
+import com.example.androidconcepts.ui_basics.FabActivity
 
 class UIBasicsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUibasicsBinding
@@ -82,6 +83,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.RECYCLER_VIEW.topicId -> startActivity(Intent(this, RecyclerViewActivity::class.java))
             UiBASICS.SCROLL_VIEW.topicId -> startActivity(Intent(this, ScrollViewActivity::class.java))
             UiBASICS.CARD_VIEW.topicId -> startActivity(Intent(this, CardViewActivity::class.java))
+            UiBASICS.FAB.topicId -> startActivity(Intent(this, FabActivity::class.java))
         }
     }
 }
