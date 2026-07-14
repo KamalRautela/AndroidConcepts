@@ -27,6 +27,7 @@ import com.example.androidconcepts.ui_basics.ScrollViewActivity
 import com.example.androidconcepts.ui_basics.SwitchActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
 import com.example.androidconcepts.ui_basics.FabActivity
+import com.example.androidconcepts.ui_basics.SnackBarActivity
 
 class UIBasicsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUibasicsBinding
@@ -84,6 +85,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.SCROLL_VIEW.topicId -> startActivity(Intent(this, ScrollViewActivity::class.java))
             UiBASICS.CARD_VIEW.topicId -> startActivity(Intent(this, CardViewActivity::class.java))
             UiBASICS.FAB.topicId -> startActivity(Intent(this, FabActivity::class.java))
+            UiBASICS.SNACKBAR_TOAST.topicId -> startActivity(Intent(this, SnackBarActivity::class.java))
         }
     }
 }

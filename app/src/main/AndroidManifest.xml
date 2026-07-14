@@ -75,6 +75,9 @@
         <activity
             android:name=".ui_basics.CardViewActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui_basics.SnackBarActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
