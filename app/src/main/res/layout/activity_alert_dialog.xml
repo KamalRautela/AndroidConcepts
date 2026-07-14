@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.AlertDialogActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="AlertDialog"
+        app:titleTextColor="@color/blue_7EC8E3" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Result display -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button dabao — dialog dikhega"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Basic -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_10"
+                android:letterSpacing="0.08"
+                android:text="Basic AlertDialog"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBasic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                android:backgroundTint="@color/blue_0D1B2A"
+                android:stateListAnimator="@null"
+                android:text="Show Basic Dialog"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="@dimen/text_size_14" />
+
+            <!-- Section: Single Choice -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_10"
+                android:letterSpacing="0.08"
+                android:text="Single Choice Dialog"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSingleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                android:backgroundTint="@color/blue_0D1B2A"
+                android:stateListAnimator="@null"
+                android:text="Show Single Choice"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="@dimen/text_size_14" />
+
+            <!-- Section: Multi Choice -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_10"
+                android:letterSpacing="0.08"
+                android:text="Multi Choice Dialog"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMultiChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                android:backgroundTint="@color/blue_0D1B2A"
+                android:stateListAnimator="@null"
+                android:text="Show Multi Choice"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="@dimen/text_size_14" />
+
+            <!-- Section: Input -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_10"
+                android:letterSpacing="0.08"
+                android:text="Input Dialog"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                android:backgroundTint="@color/blue_0D1B2A"
+                android:stateListAnimator="@null"
+                android:text="Show Input Dialog"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="@dimen/text_size_14" />
+
+            <!-- Note card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Key Methods"
+                        android:textColor="@color/blue_00C6FF"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_6"
+                        android:lineSpacingExtra="3dp"
+                        android:text="setTitle() → dialog title\nsetMessage() → dialog message\nsetPositiveButton() → OK / Confirm\nsetNegativeButton() → Cancel\nsetSingleChoiceItems() → radio list\nsetMultiChoiceItems() → checkbox list\nsetCancelable(false) → dismiss nahi hoga"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
