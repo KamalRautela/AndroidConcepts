@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/spacing_8"
+    app:cardBackgroundColor="@color/blue_0D1B2A"
+    app:cardCornerRadius="@dimen/spacing_8"
+    app:strokeColor="@color/blue_1B3A5C"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_12">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTopicNumber"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            tools:text="1"
+            android:textColor="@color/black_080D14"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@color/blue_0099CC"
+            android:layout_marginEnd="@dimen/spacing_12" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTopicName"
+                android:layout_width="wrap_content"
+                tools:text="Kotlin"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTopicDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Programming Language"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/spacing_4" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textColor="@color/blue_0099CC"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
