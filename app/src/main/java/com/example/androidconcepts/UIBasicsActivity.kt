@@ -22,6 +22,7 @@ import com.example.androidconcepts.ui_basics.ProgressBarActivity
 import com.example.androidconcepts.ui_basics.RadioButtonActivity
 import com.example.androidconcepts.ui_basics.recyclerView.RecyclerViewActivity
 import com.example.androidconcepts.ui_basics.RelativeLayoutActivity
+import com.example.androidconcepts.ui_basics.ScrollViewActivity
 import com.example.androidconcepts.ui_basics.SwitchActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
 
@@ -78,6 +79,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.CONSTRAINT_LAYOUT.topicId -> startActivity(Intent(this, ConstraintLayoutActivity::class.java))
             UiBASICS.FRAME_LAYOUT.topicId -> startActivity(Intent(this, FrameLayoutActivity::class.java))
             UiBASICS.RECYCLER_VIEW.topicId -> startActivity(Intent(this, RecyclerViewActivity::class.java))
+            UiBASICS.SCROLL_VIEW.topicId -> startActivity(Intent(this, ScrollViewActivity::class.java))
         }
     }
 }
