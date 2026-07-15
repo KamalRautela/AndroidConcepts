@@ -12,6 +12,7 @@ import com.example.androidconcepts.common.UiBASICS
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityUibasicsBinding
 import com.example.androidconcepts.ui_basics.AlertDialogActivity
+import com.example.androidconcepts.ui_basics.BottomNavigationActivity
 import com.example.androidconcepts.ui_basics.ButtonActivity
 import com.example.androidconcepts.ui_basics.CardViewActivity
 import com.example.androidconcepts.ui_basics.CheckBoxActivity
@@ -88,6 +89,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.FAB.topicId -> startActivity(Intent(this, FabActivity::class.java))
             UiBASICS.SNACKBAR_TOAST.topicId -> startActivity(Intent(this, SnackBarActivity::class.java))
             UiBASICS.ALERT_DIALOG.topicId -> startActivity(Intent(this, AlertDialogActivity::class.java))
+            UiBASICS.BOTTOM_NAVIGATION.topicId -> startActivity(Intent(this, BottomNavigationActivity::class.java))
         }
     }
 }
