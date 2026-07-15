@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".ui_basics.GlideCoilActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="Glide &amp; Coil"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Section: Basic Load -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Image Load"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBasic"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:background="@color/blue_0D1B2A"
+                android:layout_marginBottom="@dimen/spacing_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="@dimen/spacing_16">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoadBasic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_6"
+                    android:text="Load (Glide)"
+                    android:textColor="@color/black_080D14"
+                    android:backgroundTint="@color/blue_0099CC"
+                    android:stateListAnimator="@null" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoadCoil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Load (Coil)"
+                    android:textColor="@color/black_080D14"
+                    android:backgroundTint="@color/blue_00C6FF"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+            <!-- Section: Transforms -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transforms"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/spacing_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginBottom="@dimen/spacing_8">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/spacing_6">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCircle"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@color/blue_0D1B2A"
+                        android:scaleType="centerCrop" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="circleCrop"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10"
+                        android:layout_marginTop="@dimen/spacing_4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/spacing_6">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCenterCrop"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@color/blue_0D1B2A"
+                        android:scaleType="centerCrop" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="centerCrop"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10"
+                        android:layout_marginTop="@dimen/spacing_4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgFitCenter"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@color/blue_0D1B2A"
+                        android:scaleType="fitCenter" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="fitCenter"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10"
+                        android:layout_marginTop="@dimen/spacing_4" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoadTransforms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                android:text="Load Transforms"
+                android:textColor="@color/black_080D14"
+                android:backgroundTint="@color/blue_0099CC"
+                android:stateListAnimator="@null" />
+
+            <!-- Note card: Glide vs Coil -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_8"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Glide vs Coil"
+                        android:textColor="@color/blue_00C6FF"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Glide → Glide.with(ctx).load(url).into(iv)\nCoil  → imageView.load(url)\n\nGlide: Java-based, industry standard\nCoil: Kotlin-first, coroutines support\nRule: New projects mein Coil prefer karo"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:layout_marginTop="@dimen/spacing_6"
+                        android:lineSpacingExtra="3dp"
+                        android:fontFamily="monospace" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

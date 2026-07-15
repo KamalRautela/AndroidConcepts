@@ -29,6 +29,7 @@ import com.example.androidconcepts.ui_basics.ScrollViewActivity
 import com.example.androidconcepts.ui_basics.SwitchActivity
 import com.example.androidconcepts.ui_basics.TextViewActivity
 import com.example.androidconcepts.ui_basics.FabActivity
+import com.example.androidconcepts.ui_basics.GlideCoilActivity
 import com.example.androidconcepts.ui_basics.SnackBarActivity
 
 class UIBasicsActivity : AppCompatActivity() {
@@ -90,6 +91,7 @@ class UIBasicsActivity : AppCompatActivity() {
             UiBASICS.SNACKBAR_TOAST.topicId -> startActivity(Intent(this, SnackBarActivity::class.java))
             UiBASICS.ALERT_DIALOG.topicId -> startActivity(Intent(this, AlertDialogActivity::class.java))
             UiBASICS.BOTTOM_NAVIGATION.topicId -> startActivity(Intent(this, BottomNavigationActivity::class.java))
+            UiBASICS.GLIDE_COIL.topicId -> startActivity(Intent(this, GlideCoilActivity::class.java))
         }
     }
 }

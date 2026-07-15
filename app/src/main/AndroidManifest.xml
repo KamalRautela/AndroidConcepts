@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".ui_basics.BottomNavigationActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -83,6 +80,12 @@
             android:exported="false" />
         <activity
             android:name=".ui_basics.FabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui_basics.GlideCoilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui_basics.BottomNavigationActivity"
             android:exported="false" />
     </application>
 
