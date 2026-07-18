@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidconcepts.activity_fragment_lifecycle.ActivityLifecycle
+import com.example.androidconcepts.activity_fragment_lifecycle.SavedInstanceStateActivity
 import com.example.androidconcepts.common.ActivityLifecycleConcepts
 import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.setDynamicSpacing
@@ -57,8 +58,8 @@ class ActivityLifecycleConceptsActivity : AppCompatActivity() {
     }
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
-            ActivityLifecycleConcepts.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this@ActivityLifecycleConceptsActivity,
-                ActivityLifecycle::class.java))
+            ActivityLifecycleConcepts.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this@ActivityLifecycleConceptsActivity, ActivityLifecycle::class.java))
+            ActivityLifecycleConcepts.SAVE_INSTANCE_STATE.topicId -> startActivity(Intent(this@ActivityLifecycleConceptsActivity, SavedInstanceStateActivity::class.java))
         }
     }
 }
