@@ -38,7 +38,6 @@ enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int)
 enum class ActivityLifecycleConcepts(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
     ACTIVITY_LIFECYCLE(1, R.string.al_activity_lifecycle),
     SAVE_INSTANCE_STATE(2, R.string.al_save_instance_state),
-    LAUNCH_MODES(3, R.string.al_launch_modes),
     EXPLICIT_INTENT(4, R.string.al_explicit_intent),
     IMPLICIT_INTENT(5, R.string.al_implicit_intent),
     PASS_DATA(6, R.string.al_pass_data),

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".activity_fragment_lifecycle.explicit_intent.ExplicitIntentReceiverActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="Explicit Intent — Receiver"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Received Data"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_14" />
+
+                    <!-- String -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='getStringExtra("name")'
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_10"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_14"
+                        tools:text="Kamal Rautela" />
+
+                    <!-- Int -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='getIntExtra("age", 0)'
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_10"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_14"
+                        tools:text="24" />
+
+                    <!-- Float -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='getFloatExtra("score", 0f)'
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_10"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_14"
+                        tools:text="9.5" />
+
+                    <!-- Double -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='getDoubleExtra("price", 0.0)'
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_10"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_14"
+                        tools:text="299.99" />
+
+                    <!-- Long -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='getLongExtra("userId", 0L)'
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_10"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_14"
+                        tools:text="1234567890" />
+
+                    <!-- Boolean -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='getBooleanExtra("isPremium", false)'
+                        android:textColor="@color/blue_0099CC"
+                        android:textSize="@dimen/text_size_10"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvIsPremium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        tools:text="true" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
