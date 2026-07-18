@@ -52,6 +52,8 @@ class TopicOptionsActivity : AppCompatActivity() {
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
             TOPICS.UI_BASICS.topicId -> startActivity(Intent(this, UIBasicsActivity::class.java))
+            TOPICS.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this,
+                ActivityLifecycleConceptsActivity::class.java))
         }
     }
 }

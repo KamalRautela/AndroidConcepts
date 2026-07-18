@@ -24,6 +24,24 @@
     <string name="alert_dialog">AlertDialog</string>
     <string name="bottom_navigation">BottomNavigation</string>
     <string name="glide_coil">Glide / Coil</string>
+
+    <!-- Activity Lifecycle Topics -->
+    <string name="activity_lifecycle">Activity &amp; Fragment Lifecycle</string>
+    <string name="al_activity_lifecycle">Activity Lifecycle</string>
+    <string name="al_save_instance_state">Save Instance State</string>
+    <string name="al_launch_modes">Launch Modes</string>
+    <string name="al_explicit_intent">Explicit Intent</string>
+    <string name="al_implicit_intent">Implicit Intent</string>
+    <string name="al_pass_data">Pass Data Between Activities</string>
+    <string name="al_activity_result_launcher">ActivityResultLauncher</string>
+    <string name="al_intent_flags">Intent Flags</string>
+    <string name="al_fragment_basics">Fragment Basics</string>
+    <string name="al_fragment_manager">FragmentManager</string>
+    <string name="al_back_stack">Back Stack</string>
+    <string name="al_fragment_communication">Fragment Communication</string>
+    <string name="al_permission_types">Permission Types</string>
+    <string name="al_permission_request">Request Permission</string>
+    <string name="al_permission_denied">Permission Denied</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

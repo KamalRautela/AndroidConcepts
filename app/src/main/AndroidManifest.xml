@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -86,6 +87,12 @@
             android:exported="false" />
         <activity
             android:name=".ui_basics.BottomNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLifecycleConceptsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.ActivityLifecycle"
             android:exported="false" />
     </application>
 
