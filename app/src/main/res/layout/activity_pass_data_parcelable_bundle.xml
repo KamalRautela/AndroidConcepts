@@ -170,6 +170,29 @@
                 android:backgroundTint="@color/blue_1B3A5C"
                 android:stateListAnimator="@null" />
 
+            <!-- Get Result Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGetResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_12"
+                android:text="↩  Get Result from Picker"
+                android:textColor="@color/blue_7EC8E3"
+                android:backgroundTint="@color/black_080D14"
+                android:stateListAnimator="@null" />
+
+            <!-- Result TextView -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result: —"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="@dimen/spacing_12"
+                android:visibility="gone" />
+
             <!-- Note Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"

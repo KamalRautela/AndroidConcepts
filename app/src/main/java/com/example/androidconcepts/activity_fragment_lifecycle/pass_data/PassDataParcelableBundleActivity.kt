@@ -2,13 +2,15 @@ package com.example.androidconcepts.activity_fragment_lifecycle.pass_data
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidconcepts.R
 import com.example.androidconcepts.databinding.ActivityPassDataParcelableBundleBinding
-import com.example.androidconcepts.databinding.ActivityReceiveDataParcelableBundleBinding
 
 class PassDataParcelableBundleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPassDataParcelableBundleBinding
@@ -24,13 +26,30 @@ class PassDataParcelableBundleActivity : AppCompatActivity() {
 
         handleBackPress()
 
-        bindUi()
+        val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            result ->
+            if (result.resultCode == RESULT_OK) {
+                val color = result.data?.getStringExtra("color")
+                binding.tvResult.visibility = View.VISIBLE
+                binding.tvResult.text = "Result: $color"
+            }
+        }
+
+        bindUi(launcher)
     }
 
-    private fun bindUi() {
+    private fun bindUi(launcher : ActivityResultLauncher<Intent>) {
 
         binding.switchIsPremium.setOnCheckedChangeListener { _, isChecked ->
             binding.tvIsPremium.text = if (isChecked) "true" else "false"
+        }
+
+        binding.btnGetResult.setOnClickListener {
+            val intent = Intent(this@PassDataParcelableBundleActivity,
+                ReceiveDataParcelableBundleActivity::class.java).apply {
+                putExtra("mode", "picker")
+            }
+            launcher.launch(intent)
         }
 
         binding.btnSendAsObject.setOnClickListener {
@@ -67,6 +86,8 @@ class PassDataParcelableBundleActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+
+
     }
 
     private fun handleBackPress() {

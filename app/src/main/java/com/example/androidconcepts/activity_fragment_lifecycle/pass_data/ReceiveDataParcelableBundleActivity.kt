@@ -1,7 +1,9 @@
 package com.example.androidconcepts.activity_fragment_lifecycle.pass_data
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,7 @@ class ReceiveDataParcelableBundleActivity : AppCompatActivity() {
 
         bindUi()
     }
+
     private fun bindUi() {
         val mode = intent.getStringExtra("mode")
         binding.tvMode.text = mode
@@ -40,6 +43,17 @@ class ReceiveDataParcelableBundleActivity : AppCompatActivity() {
             binding.tvName.text = user?.name ?: "—"
             binding.tvAge.text = user?.age?.toString() ?: "—"
             binding.tvIsPremium.text = user?.isPremium?.toString() ?: "—"
+        } else if (mode == "picker") {
+            binding.cardColorPicker.visibility = View.VISIBLE
+
+            val pickColor = { color: String ->
+                val result = Intent().apply { putExtra("color", color) }
+                setResult(RESULT_OK, result)
+                finish()
+            }
+            binding.btnRed.setOnClickListener { pickColor("red") }
+            binding.btnBlue.setOnClickListener { pickColor("blue") }
+            binding.btnGreen.setOnClickListener { pickColor("green") }
         } else {
             binding.tvName.text = intent.getStringExtra("name") ?: "—"
             binding.tvAge.text = intent.getIntExtra("age", 0).toString()
@@ -52,6 +66,7 @@ class ReceiveDataParcelableBundleActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }
+
     private fun setEdgeToEdge() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
