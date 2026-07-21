@@ -11,6 +11,7 @@ import com.example.androidconcepts.activity_fragment_lifecycle.ActivityLifecycle
 import com.example.androidconcepts.activity_fragment_lifecycle.ImplicitIntentActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.SavedInstanceStateActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.explicit_intent.ExplicitIntentSenderActivity
+import com.example.androidconcepts.activity_fragment_lifecycle.pass_data.PassDataParcelableBundleActivity
 import com.example.androidconcepts.common.ActivityLifecycleConcepts
 import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.setDynamicSpacing
@@ -90,6 +91,13 @@ class ActivityLifecycleConceptsActivity : AppCompatActivity() {
                 Intent(
                     this@ActivityLifecycleConceptsActivity,
                     ImplicitIntentActivity::class.java
+                )
+            )
+
+            ActivityLifecycleConcepts.PASS_DATA.topicId -> startActivity(
+                Intent(
+                    this@ActivityLifecycleConceptsActivity,
+                    PassDataParcelableBundleActivity::class.java
                 )
             )
         }

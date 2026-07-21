@@ -105,6 +105,12 @@
         <activity
             android:name=".activity_fragment_lifecycle.ImplicitIntentActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.pass_data.ReceiveDataParcelableBundleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.pass_data.PassDataParcelableBundleActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
