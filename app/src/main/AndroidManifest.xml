@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".activity_fragment_lifecycle.explicit_intent.ExplicitIntentReceiverActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -101,6 +98,12 @@
             android:exported="false" />
         <activity
             android:name=".activity_fragment_lifecycle.SavedInstanceStateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.explicit_intent.ExplicitIntentReceiverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.ImplicitIntentActivity"
             android:exported="false" />
     </application>
 
