@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".activity_fragment_lifecycle.intent_flags.DummyActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="Dummy Activity"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_16"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Status Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_16"
+            app:cardBackgroundColor="@color/blue_0D1B2A"
+            app:cardCornerRadius="@dimen/spacing_12"
+            app:strokeColor="@color/blue_1B3A5C"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_16">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stack mein add ho gaya!"
+                    android:textColor="@color/white_FFFFFF"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStackInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ab neeche ka button click karo — flag ka effect dikhega"
+                    android:textColor="@color/blue_7EC8E3"
+                    android:textSize="@dimen/text_size_12"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="Ab neeche ka button click karo" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Relaunch Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRelaunchFlagDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="▶  FlagDemo relaunch karo"
+            android:textColor="@color/black_080D14"
+            android:backgroundTint="@color/blue_0099CC"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

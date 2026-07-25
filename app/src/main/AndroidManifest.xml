@@ -111,6 +111,15 @@
         <activity
             android:name=".activity_fragment_lifecycle.pass_data.PassDataParcelableBundleActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.intent_flags.IntentFlagsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.intent_flags.FlagDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.intent_flags.DummyActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
