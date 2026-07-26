@@ -11,6 +11,7 @@ import com.example.androidconcepts.activity_fragment_lifecycle.ActivityLifecycle
 import com.example.androidconcepts.activity_fragment_lifecycle.ImplicitIntentActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.SavedInstanceStateActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.explicit_intent.ExplicitIntentSenderActivity
+import com.example.androidconcepts.activity_fragment_lifecycle.fragment_basics.FragmentBasicsActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.intent_flags.IntentFlagsActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.pass_data.PassDataParcelableBundleActivity
 import com.example.androidconcepts.common.ActivityLifecycleConcepts
@@ -106,6 +107,13 @@ class ActivityLifecycleConceptsActivity : AppCompatActivity() {
                 Intent(
                     this@ActivityLifecycleConceptsActivity,
                     IntentFlagsActivity::class.java
+                )
+            )
+
+            ActivityLifecycleConcepts.FRAGMENT_BASICS.topicId -> startActivity(
+                Intent(
+                    this@ActivityLifecycleConceptsActivity,
+                    FragmentBasicsActivity::class.java
                 )
             )
         }
