@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".activity_fragment_lifecycle.fragment_backstack.FragmentBackstackActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="Fragment Back Stack"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Container + Stack Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_12"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_12">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/fragmentContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@color/black_080D14"
+                        android:layout_marginBottom="@dimen/spacing_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Back Stack: "
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_10"
+                            android:fontFamily="monospace" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStackEntries"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="(khali)"
+                            android:textColor="@color/blue_00C6FF"
+                            android:textSize="@dimen/text_size_10"
+                            android:fontFamily="monospace" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBackStackCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 entries"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_10"
+                            android:fontFamily="monospace" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Push Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_12"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Push  →  addToBackStack(name)"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPushA"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/spacing_6"
+                            android:text="Push A"
+                            android:textColor="@color/black_080D14"
+                            android:backgroundTint="@color/blue_0099CC"
+                            android:stateListAnimator="@null" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPushB"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/spacing_6"
+                            android:text="Push B"
+                            android:textColor="@color/white_FFFFFF"
+                            android:backgroundTint="#7B3FA0"
+                            android:stateListAnimator="@null" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPushC"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Push C"
+                            android:textColor="@color/white_FFFFFF"
+                            android:backgroundTint="#2E7D32"
+                            android:stateListAnimator="@null" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Pop Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_12"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pop"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"
+                        android:layout_marginBottom="@dimen/spacing_10" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPopOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_8"
+                        android:text="popBackStack()  —  ek pop"
+                        android:textColor="@color/white_FFFFFF"
+                        android:backgroundTint="#E65100"
+                        android:stateListAnimator="@null" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPopToA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_8"
+                        android:text="popBackStack(&quot;a&quot;, 0)  —  A tak, A bachega"
+                        android:textColor="@color/white_FFFFFF"
+                        android:backgroundTint="#1565C0"
+                        android:stateListAnimator="@null" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPopToAInclusive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_8"
+                        android:text="popBackStack(&quot;a&quot;, INCLUSIVE)  —  A bhi hata"
+                        android:textColor="@color/white_FFFFFF"
+                        android:backgroundTint="#6A1B9A"
+                        android:stateListAnimator="@null" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnClearAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Clear All  —  poora stack saaf"
+                        android:textColor="@color/white_FFFFFF"
+                        android:backgroundTint="#B71C1C"
+                        android:stateListAnimator="@null" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
