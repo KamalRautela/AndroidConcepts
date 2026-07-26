@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".activity_fragment_lifecycle.fragment_basics.FragmentBasicsActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -122,6 +119,12 @@
             android:exported="false" />
         <activity
             android:name=".activity_fragment_lifecycle.intent_flags.DummyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.fragment_manager.FragmentManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fragment_lifecycle.fragment_basics.FragmentBasicsActivity"
             android:exported="false" />
     </application>
 

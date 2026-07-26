@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#001A33"
+    android:padding="@dimen/spacing_16">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment A"
+        android:textColor="@color/blue_00C6FF"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="@dimen/spacing_8" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTapCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taps: 0"
+        android:textColor="@color/blue_7EC8E3"
+        android:textSize="@dimen/text_size_12"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="@dimen/spacing_10" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap A"
+        android:textColor="@color/black_080D14"
+        android:backgroundTint="@color/blue_0099CC"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>
