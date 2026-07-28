@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue_0D1B2A"
+    android:padding="@dimen/spacing_14">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment A — Sender"
+        android:textColor="@color/blue_7EC8E3"
+        android:textSize="@dimen/text_size_12"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/spacing_10" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="message type karo..."
+        android:textColor="@color/white_FFFFFF"
+        android:textColorHint="#446688"
+        android:fontFamily="monospace"
+        android:textSize="@dimen/text_size_12"
+        android:background="@color/black_080D14"
+        android:padding="@dimen/spacing_10"
+        android:layout_marginBottom="@dimen/spacing_10"
+        android:inputType="text"
+        android:imeOptions="actionSend"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendResultApi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:text="Result API"
+            android:textColor="@color/black_080D14"
+            android:textSize="@dimen/text_size_10"
+            android:fontFamily="monospace"
+            android:backgroundTint="@color/blue_0099CC"
+            android:stateListAnimator="@null" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendViewModel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ViewModel"
+            android:textColor="@color/white_FFFFFF"
+            android:textSize="@dimen/text_size_10"
+            android:fontFamily="monospace"
+            android:backgroundTint="#7B3FA0"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</LinearLayout>

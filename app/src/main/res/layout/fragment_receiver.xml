@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black_080D14"
+    android:padding="@dimen/spacing_14">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment B — Receiver"
+        android:textColor="#4CAF50"
+        android:textSize="@dimen/text_size_12"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/spacing_10" />
+
+    <!-- Result API Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_8"
+        app:cardBackgroundColor="@color/blue_0D1B2A"
+        app:cardCornerRadius="@dimen/spacing_8"
+        app:strokeColor="@color/blue_0099CC"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setFragmentResult( ) →"
+                android:textColor="@color/blue_7EC8E3"
+                android:textSize="@dimen/text_size_10"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="@dimen/spacing_4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResultApiMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="@color/blue_00C6FF"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ViewModel Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/blue_0D1B2A"
+        app:cardCornerRadius="@dimen/spacing_8"
+        app:strokeColor="#6A1B9A"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SharedViewModel.collect( ) →"
+                android:textColor="#C792EA"
+                android:textSize="@dimen/text_size_10"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="@dimen/spacing_4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewModelMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#C792EA"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
