@@ -13,6 +13,7 @@ import com.example.androidconcepts.activity_fragment_lifecycle.SavedInstanceStat
 import com.example.androidconcepts.activity_fragment_lifecycle.explicit_intent.ExplicitIntentSenderActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.fragment_backstack.FragmentBackstackActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.fragment_communication.FragmentCommunicationActivity
+import com.example.androidconcepts.activity_fragment_lifecycle.permission.PermissionDemoActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.fragment_basics.FragmentBasicsActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.fragment_manager.FragmentManagerActivity
 import com.example.androidconcepts.activity_fragment_lifecycle.intent_flags.IntentFlagsActivity
@@ -138,6 +139,15 @@ class ActivityLifecycleConceptsActivity : AppCompatActivity() {
                 Intent(
                     this@ActivityLifecycleConceptsActivity,
                     FragmentCommunicationActivity::class.java
+                )
+            )
+
+            ActivityLifecycleConcepts.PERMISSION_TYPES.topicId,
+            ActivityLifecycleConcepts.PERMISSION_REQUEST.topicId,
+            ActivityLifecycleConcepts.PERMISSION_DENIED.topicId -> startActivity(
+                Intent(
+                    this@ActivityLifecycleConceptsActivity,
+                    PermissionDemoActivity::class.java
                 )
             )
         }
