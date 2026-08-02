@@ -9,7 +9,8 @@ interface CONCEPTS {
 
 enum class TOPICS(override val topicId: Int, override val topicNameResId : Int) : CONCEPTS {
     UI_BASICS(1, R.string.ui_basics),
-    ACTIVITY_LIFECYCLE(2, R.string.activity_lifecycle)
+    ACTIVITY_LIFECYCLE(2, R.string.activity_lifecycle),
+    MVVM_CONCEPTS(3, R.string.mvvm_jetpack)
 }
 
 enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
@@ -50,5 +51,14 @@ enum class ActivityLifecycleConcepts(override val topicId: Int, override val top
     PERMISSION_TYPES(13, R.string.al_permission_types),
     PERMISSION_REQUEST(14, R.string.al_permission_request),
     PERMISSION_DENIED(15, R.string.al_permission_denied),
+}
+
+enum class MVVMConcepts(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
+    BASIC_VIEWMODEL(1, R.string.basic_mvvm_view_model),
+    LIVE_DATA(2, R.string.mvvm_live_data),
+    STATE_FLOW(3, R.string.mvvm_state_flow),
+    LIVEDATA_VS_STATEFLOW(4, R.string.mvvm_livedata_vs_stateflow),
+    MVVM_PATTERN(5, R.string.mvvm_pattern),
+    REPOSITORY_PATTERN(6, R.string.mvvm_repository_pattern),
 }
 

@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidconcepts.common.TOPICS
 import com.example.androidconcepts.common.ConceptAdapter
+import com.example.androidconcepts.common.MVVMConcepts
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityTopicOptionsBinding
 
@@ -52,8 +53,8 @@ class TopicOptionsActivity : AppCompatActivity() {
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
             TOPICS.UI_BASICS.topicId -> startActivity(Intent(this, UIBasicsActivity::class.java))
-            TOPICS.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this,
-                ActivityLifecycleConceptsActivity::class.java))
+            TOPICS.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this, ActivityLifecycleConceptsActivity::class.java))
+            TOPICS.MVVM_CONCEPTS.topicId -> startActivity(Intent(this, MvvmConceptsActivity::class.java))
         }
     }
 }

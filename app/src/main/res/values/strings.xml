@@ -42,6 +42,16 @@
     <string name="al_permission_types">Permission Types</string>
     <string name="al_permission_request">Request Permission</string>
     <string name="al_permission_denied">Permission Denied</string>
+    <!-- MVVM + Jetpack Topics -->
+    <string name="mvvm_jetpack">MVVM + Jetpack</string>
+    <string name="mvvm_view_model">ViewModel</string>
+    <string name="basic_mvvm_view_model">Basic ViewModel</string>
+    <string name="mvvm_live_data">LiveData</string>
+    <string name="mvvm_state_flow">StateFlow</string>
+    <string name="mvvm_livedata_vs_stateflow">LiveData vs StateFlow</string>
+    <string name="mvvm_pattern">MVVM Pattern</string>
+    <string name="mvvm_repository_pattern">Repository Pattern</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
