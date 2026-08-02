@@ -13,6 +13,7 @@ import com.example.androidconcepts.common.MVVMConcepts
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityMvvmConceptsBinding
 import com.example.androidconcepts.mvvm.view_model.basic_view_model.BasicViewModelActivity
+import com.example.androidconcepts.mvvm.view_model.view_model_scope.ViewModelScopeActivity
 
 class MvvmConceptsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMvvmConceptsBinding
@@ -48,6 +49,8 @@ class MvvmConceptsActivity : AppCompatActivity() {
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
             MVVMConcepts.BASIC_VIEWMODEL.topicId -> startActivity(Intent(this@MvvmConceptsActivity, BasicViewModelActivity::class.java))
+            MVVMConcepts.VIEWMODEL_SCOPE.topicId -> startActivity(Intent(this@MvvmConceptsActivity,
+                ViewModelScopeActivity::class.java))
         }
     }
     private fun handleBackPress() {

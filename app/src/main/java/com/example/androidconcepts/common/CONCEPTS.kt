@@ -55,6 +55,7 @@ enum class ActivityLifecycleConcepts(override val topicId: Int, override val top
 
 enum class MVVMConcepts(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
     BASIC_VIEWMODEL(1, R.string.basic_mvvm_view_model),
+    VIEWMODEL_SCOPE(2, R.string.view_model_scope),
     LIVE_DATA(2, R.string.mvvm_live_data),
     STATE_FLOW(3, R.string.mvvm_state_flow),
     LIVEDATA_VS_STATEFLOW(4, R.string.mvvm_livedata_vs_stateflow),

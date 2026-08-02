@@ -46,6 +46,7 @@
     <string name="mvvm_jetpack">MVVM + Jetpack</string>
     <string name="mvvm_view_model">ViewModel</string>
     <string name="basic_mvvm_view_model">Basic ViewModel</string>
+    <string name="view_model_scope">ViewModel Scope</string>
     <string name="mvvm_live_data">LiveData</string>
     <string name="mvvm_state_flow">StateFlow</string>
     <string name="mvvm_livedata_vs_stateflow">LiveData vs StateFlow</string>
