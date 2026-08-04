@@ -13,6 +13,7 @@ import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityMvvmConceptsBinding
 import com.example.androidconcepts.mvvm.view_model.basic_view_model.BasicViewModelActivity
 import com.example.androidconcepts.mvvm.view_model.livedata.LiveDataActivity
+import com.example.androidconcepts.mvvm.view_model.stateFlow.StateFlowActivity
 import com.example.androidconcepts.mvvm.view_model.view_model_scope.ViewModelScopeActivity
 
 class MvvmConceptsActivity : AppCompatActivity() {
@@ -51,6 +52,7 @@ class MvvmConceptsActivity : AppCompatActivity() {
             MVVMConcepts.BASIC_VIEWMODEL.topicId -> startActivity(Intent(this@MvvmConceptsActivity, BasicViewModelActivity::class.java))
             MVVMConcepts.VIEWMODEL_SCOPE.topicId -> startActivity(Intent(this@MvvmConceptsActivity, ViewModelScopeActivity::class.java))
             MVVMConcepts.LIVE_DATA.topicId -> startActivity(Intent(this@MvvmConceptsActivity, LiveDataActivity::class.java))
+            MVVMConcepts.STATE_FLOW.topicId -> startActivity(Intent(this@MvvmConceptsActivity, StateFlowActivity::class.java))
         }
     }
     private fun handleBackPress() {
