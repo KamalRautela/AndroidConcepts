@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".mvvm.view_model.livedata.LiveDataActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="LiveData"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Input Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CELSIUS TYPE KARO"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="@dimen/spacing_10" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCelsius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g. 100"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textColorHint="@color/blue_1B3A5C"
+                        android:background="@drawable/chip_outline"
+                        android:padding="@dimen/spacing_12"
+                        android:textSize="@dimen/text_size_14"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Result Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RESULT"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="@dimen/spacing_16" />
+
+                    <!-- Celsius Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/spacing_12">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Celsius"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCelsius"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/orange_FF9800"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"
+                            tools:text="100°C" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_1B3A5C"
+                        android:layout_marginBottom="@dimen/spacing_12" />
+
+                    <!-- Fahrenheit Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fahrenheit"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFahrenheit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/blue_00C6FF"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"
+                            tools:text="212°F" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- How to Test Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="How to Test"
+                        android:textColor="@color/blue_00C6FF"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_6" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. EditText mein celsius value type karo\n2. Fahrenheit automatically update hogi\n3. 0°C → 32°F\n4. 100°C → 212°F"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,9 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".MvvmConceptsActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -151,6 +148,12 @@
             android:exported="false" />
         <activity
             android:name=".mvvm.view_model.view_model_scope.ViewModelScopeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.view_model.livedata.LiveDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MvvmConceptsActivity"
             android:exported="false" />
     </application>
 

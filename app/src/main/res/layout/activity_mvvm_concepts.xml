@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/blue_0D1B2A"
         android:padding="@dimen/spacing_8"
-        app:title="@string/activity_lifecycle"
+        app:title="@string/mvvm_jetpack"
         app:titleTextColor="@color/blue_7EC8E3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
