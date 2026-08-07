@@ -1,4 +1,4 @@
-package com.example.androidconcepts.mvvm.view_model.stateFlow
+package com.example.androidconcepts.mvvm.stateFlow
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

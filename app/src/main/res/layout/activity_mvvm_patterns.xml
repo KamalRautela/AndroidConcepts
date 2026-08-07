@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".mvvm.mvvm_pattern.MvvmPatternsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:title="MVVM Pattern"
+        app:titleTextColor="@color/blue_7EC8E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/spacing_16">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⤓ Load User"
+                    android:textColor="@color/black_080D14"
+                    android:backgroundTint="@color/blue_0099CC"
+                    android:stateListAnimator="@null"
+                    android:paddingStart="@dimen/spacing_24"
+                    android:paddingEnd="@dimen/spacing_24"
+                    android:layout_marginEnd="@dimen/spacing_12" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnIncreaseAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Increase Age"
+                    android:textColor="@color/black_080D14"
+                    android:backgroundTint="@color/blue_1B3A5C"
+                    android:stateListAnimator="@null"
+                    android:paddingStart="@dimen/spacing_24"
+                    android:paddingEnd="@dimen/spacing_24" />
+
+            </LinearLayout>
+
+            <!-- Profile Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Header row: avatar + name/email -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/spacing_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAvatar"
+                            android:layout_width="@dimen/spacing_40"
+                            android:layout_height="@dimen/spacing_40"
+                            android:background="@drawable/circle_accent_bg"
+                            android:gravity="center"
+                            android:text="—"
+                            android:textColor="@color/black_080D14"
+                            android:textSize="@dimen/text_size_16"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="@dimen/spacing_12" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white_FFFFFF"
+                                android:textSize="@dimen/text_size_16"
+                                android:textStyle="bold"
+                                tools:text="Kamal Rautela" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue_7EC8E3"
+                                android:textSize="@dimen/text_size_12"
+                                tools:text="kamal@example.com" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_1B3A5C" />
+
+                    <!-- Body: Age / Source rows -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_16">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/spacing_10">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Age"
+                                android:textColor="@color/blue_7EC8E3"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/orange_FF9800"
+                                android:textSize="@dimen/text_size_20"
+                                android:textStyle="bold"
+                                android:fontFamily="monospace"
+                                tools:text="24" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Source"
+                                android:textColor="@color/blue_7EC8E3"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User (Model)"
+                                android:textColor="@color/blue_00C6FF"
+                                android:textSize="@dimen/text_size_12"
+                                android:fontFamily="monospace" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- How to Test Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="How to Test"
+                        android:textColor="@color/blue_00C6FF"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_6" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Load User press karo — Model (User) ViewModel se load hoga\n2. LiveData emit hote hi View card update karegi\n3. Increase Age press karo — ViewModel Model ka copy() se naya User banayega\n4. View wapas auto update hogi — koi manual refresh nahi"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

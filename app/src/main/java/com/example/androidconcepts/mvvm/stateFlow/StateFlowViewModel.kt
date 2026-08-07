@@ -1,4 +1,4 @@
-package com.example.androidconcepts.mvvm.view_model.stateFlow
+package com.example.androidconcepts.mvvm.stateFlow
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

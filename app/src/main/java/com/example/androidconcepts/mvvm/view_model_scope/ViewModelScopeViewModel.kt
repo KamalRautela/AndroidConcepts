@@ -1,4 +1,4 @@
-package com.example.androidconcepts.mvvm.view_model.view_model_scope
+package com.example.androidconcepts.mvvm.view_model_scope
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

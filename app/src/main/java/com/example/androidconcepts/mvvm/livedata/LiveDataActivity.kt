@@ -1,4 +1,4 @@
-package com.example.androidconcepts.mvvm.view_model.livedata
+package com.example.androidconcepts.mvvm.livedata
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

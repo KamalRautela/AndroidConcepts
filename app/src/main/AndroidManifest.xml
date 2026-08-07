@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
+            android:name=".mvvm.mvvm_pattern.MvvmPatternsActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -144,19 +147,19 @@
             android:name=".activity_fragment_lifecycle.permission.PermissionDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.view_model.basic_view_model.BasicViewModelActivity"
+            android:name=".mvvm.basic_view_model.BasicViewModelActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.view_model.view_model_scope.ViewModelScopeActivity"
+            android:name=".mvvm.view_model_scope.ViewModelScopeActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.view_model.livedata.LiveDataActivity"
+            android:name=".mvvm.livedata.LiveDataActivity"
             android:exported="false" />
         <activity
             android:name=".MvvmConceptsActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.view_model.stateFlow.StateFlowActivity"
+            android:name=".mvvm.stateFlow.StateFlowActivity"
             android:exported="false" />
     </application>
 

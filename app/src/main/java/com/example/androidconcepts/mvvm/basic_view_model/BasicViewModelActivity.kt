@@ -1,4 +1,4 @@
-package com.example.androidconcepts.mvvm.view_model.view_model_scope
+package com.example.androidconcepts.mvvm.basic_view_model
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,24 +7,37 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidconcepts.R
-import com.example.androidconcepts.databinding.ActivityViewModelScopeBinding
+import com.example.androidconcepts.databinding.ActivityBasicViewModelBinding
 
-class ViewModelScopeActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityViewModelScopeBinding
-    private val viewModel: ViewModelScopeViewModel by viewModels()
+class BasicViewModelActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityBasicViewModelBinding
+    private val viewModel: BasicViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityViewModelScopeBinding.inflate(layoutInflater)
+        binding = ActivityBasicViewModelBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setEdgeToEdge()
-
         handleBackPress()
-
         bindUi()
+    }
+
+    private fun bindUi() {
+        viewModel.counter.observe(this@BasicViewModelActivity) { counter ->
+            binding.tvCounter.text = counter.toString()
+        }
+        binding.btnIncrement.setOnClickListener {
+            viewModel.incrementCounter()
+        }
+        binding.btnDecrement.setOnClickListener {
+            viewModel.decrementCounter()
+        }
+        binding.btnReset.setOnClickListener {
+            viewModel.resetCounter()
+        }
     }
 
     private fun setEdgeToEdge() {
@@ -34,20 +47,9 @@ class ViewModelScopeActivity : AppCompatActivity() {
             insets
         }
     }
-
     private fun handleBackPress() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
-    }
-
-    private fun bindUi() {
-        binding.btnStart.setOnClickListener { viewModel.start() }
-        binding.btnStop.setOnClickListener { viewModel.stop() }
-        binding.btnReset.setOnClickListener { viewModel.reset() }
-
-        viewModel.seconds.observe(this@ViewModelScopeActivity) {
-            binding.tvSeconds.text = it.toString()
-        }
     }
 }

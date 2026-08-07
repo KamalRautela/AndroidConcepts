@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    tools:context=".mvvm.view_model.basic_view_model.BasicViewModelActivity">
+    tools:context=".mvvm.basic_view_model.BasicViewModelActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

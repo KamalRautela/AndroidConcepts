@@ -11,10 +11,11 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.MVVMConcepts
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityMvvmConceptsBinding
-import com.example.androidconcepts.mvvm.view_model.basic_view_model.BasicViewModelActivity
-import com.example.androidconcepts.mvvm.view_model.livedata.LiveDataActivity
-import com.example.androidconcepts.mvvm.view_model.stateFlow.StateFlowActivity
-import com.example.androidconcepts.mvvm.view_model.view_model_scope.ViewModelScopeActivity
+import com.example.androidconcepts.mvvm.basic_view_model.BasicViewModelActivity
+import com.example.androidconcepts.mvvm.livedata.LiveDataActivity
+import com.example.androidconcepts.mvvm.mvvm_pattern.MvvmPatternsActivity
+import com.example.androidconcepts.mvvm.stateFlow.StateFlowActivity
+import com.example.androidconcepts.mvvm.view_model_scope.ViewModelScopeActivity
 
 class MvvmConceptsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMvvmConceptsBinding
@@ -53,6 +54,7 @@ class MvvmConceptsActivity : AppCompatActivity() {
             MVVMConcepts.VIEWMODEL_SCOPE.topicId -> startActivity(Intent(this@MvvmConceptsActivity, ViewModelScopeActivity::class.java))
             MVVMConcepts.LIVE_DATA.topicId -> startActivity(Intent(this@MvvmConceptsActivity, LiveDataActivity::class.java))
             MVVMConcepts.STATE_FLOW.topicId -> startActivity(Intent(this@MvvmConceptsActivity, StateFlowActivity::class.java))
+            MVVMConcepts.MVVM_PATTERN.topicId -> startActivity(Intent(this@MvvmConceptsActivity, MvvmPatternsActivity::class.java))
         }
     }
     private fun handleBackPress() {
