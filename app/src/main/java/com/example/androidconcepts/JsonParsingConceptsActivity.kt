@@ -11,6 +11,7 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.JSON_RETROFIT
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityJsonParsingConceptsBinding
+import com.example.androidconcepts.json_local_parsing.object_parsing.JsonArrayParsingActivity
 import com.example.androidconcepts.json_local_parsing.object_parsing.JsonObjectParsingActivity
 
 class JsonParsingConceptsActivity : AppCompatActivity() {
@@ -46,6 +47,7 @@ class JsonParsingConceptsActivity : AppCompatActivity() {
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
             JSON_RETROFIT.JSON_OBJECT_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonObjectParsingActivity::class.java))
+            JSON_RETROFIT.JSON_ARRAY_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonArrayParsingActivity::class.java))
         }
     }
     private fun handleBackPress() {

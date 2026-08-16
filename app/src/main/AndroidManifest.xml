@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
+            android:name=".json_local_parsing.object_parsing.JsonArrayParsingActivity"
+            android:exported="false" />
+        <activity
             android:name=".JsonParsingConceptsActivity"
             android:exported="false" />
         <activity
