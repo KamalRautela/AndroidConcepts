@@ -11,8 +11,8 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.JSON_RETROFIT
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityJsonParsingConceptsBinding
-import com.example.androidconcepts.json_local_parsing.object_parsing.JsonArrayParsingActivity
-import com.example.androidconcepts.json_local_parsing.object_parsing.JsonObjectParsingActivity
+import com.example.androidconcepts.json_parsing.local_parsing.JsonArrayParsingActivity
+import com.example.androidconcepts.json_parsing.local_parsing.JsonObjectParsingActivity
 
 class JsonParsingConceptsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJsonParsingConceptsBinding

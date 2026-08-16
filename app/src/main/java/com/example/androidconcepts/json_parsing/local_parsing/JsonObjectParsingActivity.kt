@@ -1,4 +1,4 @@
-package com.example.androidconcepts.json_local_parsing.object_parsing
+package com.example.androidconcepts.json_parsing.local_parsing
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
