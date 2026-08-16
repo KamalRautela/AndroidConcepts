@@ -10,7 +10,8 @@ interface CONCEPTS {
 enum class TOPICS(override val topicId: Int, override val topicNameResId : Int) : CONCEPTS {
     UI_BASICS(1, R.string.ui_basics),
     ACTIVITY_LIFECYCLE(2, R.string.activity_lifecycle),
-    MVVM_CONCEPTS(3, R.string.mvvm_jetpack)
+    MVVM_CONCEPTS(3, R.string.mvvm_jetpack),
+    JSON_RETROFIT_CONCEPTS(4, R.string.json_retrofit)
 }
 
 enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
@@ -63,3 +64,13 @@ enum class MVVMConcepts(override val topicId: Int, override val topicNameResId: 
     REPOSITORY_PATTERN(7, R.string.mvvm_repository_pattern),
 }
 
+enum class JSON_RETROFIT(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
+    JSON_OBJECT_PARSING(1, R.string.jr_json_object_parsing),
+    JSON_ARRAY_PARSING(2, R.string.jr_json_array_parsing),
+    JSON_FILE_PARSING(3, R.string.jr_json_file_parsing),
+    RETROFIT_SETUP(4, R.string.jr_retrofit_setup),
+    GET(5, R.string.jr_get),
+    POST(6, R.string.jr_post),
+    PUT(7, R.string.jr_put),
+    DELETE(8, R.string.jr_delete),
+}

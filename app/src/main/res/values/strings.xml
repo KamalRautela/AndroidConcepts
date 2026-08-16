@@ -53,6 +53,17 @@
     <string name="mvvm_pattern">MVVM Pattern</string>
     <string name="mvvm_repository_pattern">Repository Pattern</string>
 
+    <!-- Retrofit + Coroutines Topics -->
+    <string name="json_retrofit">JSON LOCAL and RETROFIT</string>
+    <string name="jr_json_object_parsing">JSON Object Parsing</string>
+    <string name="jr_json_array_parsing">JSON Array Parsing</string>
+    <string name="jr_json_file_parsing">JSON File Parsing</string>
+    <string name="jr_retrofit_setup">Retrofit Setup</string>
+    <string name="jr_get">GET</string>
+    <string name="jr_post">POST</string>
+    <string name="jr_put">PUT</string>
+    <string name="jr_delete">DELETE</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

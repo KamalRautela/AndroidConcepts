@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.glide)
     implementation(libs.coil)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.gson)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

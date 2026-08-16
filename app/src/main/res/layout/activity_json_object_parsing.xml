@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".json_local_parsing.object_parsing.JsonObjectParsingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0D1B2A"
+        android:padding="@dimen/spacing_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="JSON Object Parsing"
+        app:titleTextColor="@color/blue_7EC8E3" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Raw JSON Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_10"
+                        android:letterSpacing="0.1"
+                        android:text="RAW JSON STRING"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRawJson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/chip_outline"
+                        android:fontFamily="monospace"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="@dimen/spacing_12"
+                        android:textColor="@color/white_FFFFFF"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Parsed Result Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_1B3A5C"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_16"
+                        android:letterSpacing="0.1"
+                        android:text="PARSED RESULT — Post"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_10" />
+
+                    <!-- id row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="monospace"
+                            android:text="post.id"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvParsedId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="—"
+                            android:textColor="@color/orange_FF9800"
+                            android:textSize="@dimen/text_size_18"
+                            android:textStyle="bold"
+                            tools:text="1" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:background="@color/blue_1B3A5C" />
+
+                    <!-- title row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="monospace"
+                            android:text="post.title"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvParsedTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/blue_00C6FF"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold"
+                            tools:text="First Post" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:background="@color/blue_1B3A5C" />
+
+                    <!-- body row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_4"
+                            android:fontFamily="monospace"
+                            android:text="post.body"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvParsedBody"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/blue_00C6FF"
+                            android:textSize="@dimen/text_size_14"
+                            tools:text="Hello World" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:background="@color/blue_1B3A5C" />
+
+                    <!-- rating row (Double) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="monospace"
+                            android:text="post.rating (Double)"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvParsedRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="—"
+                            android:textColor="@color/orange_FF9800"
+                            android:textSize="@dimen/text_size_18"
+                            android:textStyle="bold"
+                            tools:text="4.5" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:background="@color/blue_1B3A5C" />
+
+                    <!-- isPublished row (Boolean) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="monospace"
+                            android:text="post.isPublished (Boolean)"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvParsedIsPublished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="—"
+                            android:textColor="@color/teal_009688"
+                            android:textSize="@dimen/text_size_18"
+                            android:textStyle="bold"
+                            tools:text="true" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/spacing_12"
+                        android:background="@color/blue_1B3A5C" />
+
+                    <!-- publishedAt row (nullable String) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="monospace"
+                            android:text="post.publishedAt (String?)"
+                            android:textColor="@color/blue_7EC8E3"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvParsedPublishedAt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="—"
+                            android:textColor="@color/purple_9C27B0"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold"
+                            tools:text="null" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- How to Test Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_0D1B2A"
+                app:cardCornerRadius="@dimen/spacing_12"
+                app:strokeColor="@color/blue_0099CC"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_14">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_6"
+                        android:text="How to Test"
+                        android:textColor="@color/blue_00C6FF"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="1. Screen khulte hi hardcoded JSON string upar dikhegi\n2. Gson().fromJson() se woh Post object mein parse hoti hai\n3. Neeche har JSON data type (String, Int, Double, Boolean, null) parsed value ke saath dikhega\n4. Field naam JSON key se exactly match hone chahiye — warna value null/default aayegi"
+                        android:textColor="@color/blue_7EC8E3"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

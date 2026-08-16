@@ -55,6 +55,7 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.UI_BASICS.topicId -> startActivity(Intent(this, UIBasicsActivity::class.java))
             TOPICS.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this, ActivityLifecycleConceptsActivity::class.java))
             TOPICS.MVVM_CONCEPTS.topicId -> startActivity(Intent(this, MvvmConceptsActivity::class.java))
+            TOPICS.JSON_RETROFIT_CONCEPTS.topicId -> startActivity(Intent(this, JsonParsingConceptsActivity::class.java))
         }
     }
 }
