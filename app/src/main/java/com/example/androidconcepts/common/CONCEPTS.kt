@@ -67,8 +67,6 @@ enum class MVVMConcepts(override val topicId: Int, override val topicNameResId: 
 enum class JSON_RETROFIT(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
     JSON_OBJECT_PARSING(1, R.string.jr_json_object_parsing),
     JSON_ARRAY_PARSING(2, R.string.jr_json_array_parsing),
-    JSON_FILE_PARSING(3, R.string.jr_json_file_parsing),
-    RETROFIT_SETUP(4, R.string.jr_retrofit_setup),
     GET(5, R.string.jr_get),
     POST(6, R.string.jr_post),
     PUT(7, R.string.jr_put),

@@ -13,6 +13,7 @@ import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityJsonParsingConceptsBinding
 import com.example.androidconcepts.json_parsing.local_parsing.JsonArrayParsingActivity
 import com.example.androidconcepts.json_parsing.local_parsing.JsonObjectParsingActivity
+import com.example.androidconcepts.json_parsing.retrofit.get_api.RetrofitGetActivity
 
 class JsonParsingConceptsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJsonParsingConceptsBinding
@@ -48,6 +49,7 @@ class JsonParsingConceptsActivity : AppCompatActivity() {
         when(topicId) {
             JSON_RETROFIT.JSON_OBJECT_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonObjectParsingActivity::class.java))
             JSON_RETROFIT.JSON_ARRAY_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonArrayParsingActivity::class.java))
+            JSON_RETROFIT.GET.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity,RetrofitGetActivity::class.java))
         }
     }
     private fun handleBackPress() {
