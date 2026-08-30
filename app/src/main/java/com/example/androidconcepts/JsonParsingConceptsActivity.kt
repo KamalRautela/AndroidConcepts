@@ -14,6 +14,7 @@ import com.example.androidconcepts.databinding.ActivityJsonParsingConceptsBindin
 import com.example.androidconcepts.json_parsing.local_parsing.JsonArrayParsingActivity
 import com.example.androidconcepts.json_parsing.local_parsing.JsonObjectParsingActivity
 import com.example.androidconcepts.json_parsing.retrofit.get_api.RetrofitGetActivity
+import com.example.androidconcepts.json_parsing.retrofit.post_api.RetrofitPostActivity
 
 class JsonParsingConceptsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJsonParsingConceptsBinding
@@ -50,6 +51,7 @@ class JsonParsingConceptsActivity : AppCompatActivity() {
             JSON_RETROFIT.JSON_OBJECT_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonObjectParsingActivity::class.java))
             JSON_RETROFIT.JSON_ARRAY_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonArrayParsingActivity::class.java))
             JSON_RETROFIT.GET.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity,RetrofitGetActivity::class.java))
+            JSON_RETROFIT.POST.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, RetrofitPostActivity::class.java))
         }
     }
     private fun handleBackPress() {
