@@ -13,8 +13,10 @@ import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityJsonParsingConceptsBinding
 import com.example.androidconcepts.json_parsing.local_parsing.JsonArrayParsingActivity
 import com.example.androidconcepts.json_parsing.local_parsing.JsonObjectParsingActivity
+import com.example.androidconcepts.json_parsing.retrofit.delete_api.RetrofitDeleteApiActivity
 import com.example.androidconcepts.json_parsing.retrofit.get_api.RetrofitGetActivity
 import com.example.androidconcepts.json_parsing.retrofit.post_api.RetrofitPostActivity
+import com.example.androidconcepts.json_parsing.retrofit.put_api.RetrofitPutApiActivity
 
 class JsonParsingConceptsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJsonParsingConceptsBinding
@@ -52,6 +54,8 @@ class JsonParsingConceptsActivity : AppCompatActivity() {
             JSON_RETROFIT.JSON_ARRAY_PARSING.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, JsonArrayParsingActivity::class.java))
             JSON_RETROFIT.GET.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity,RetrofitGetActivity::class.java))
             JSON_RETROFIT.POST.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, RetrofitPostActivity::class.java))
+            JSON_RETROFIT.PUT.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, RetrofitPutApiActivity::class.java))
+            JSON_RETROFIT.DELETE.topicId -> startActivity(Intent(this@JsonParsingConceptsActivity, RetrofitDeleteApiActivity::class.java))
         }
     }
     private fun handleBackPress() {

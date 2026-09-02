@@ -21,6 +21,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
+            android:name=".json_parsing.retrofit.put_api.RetrofitPutApiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".json_parsing.retrofit.delete_api.RetrofitDeleteApiActivity"
+            android:exported="false" />
+        <activity
             android:name=".json_parsing.retrofit.post_api.RetrofitPostActivity"
             android:exported="false" />
         <activity
