@@ -66,6 +66,7 @@
 
     <string name="room_database">ROOM DATABASE</string>
     <string name="shared_preferences">SHARED PREFERENCES</string>
+    <string name="datastore">DATASTORE</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

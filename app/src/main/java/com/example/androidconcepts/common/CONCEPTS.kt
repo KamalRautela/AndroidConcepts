@@ -13,7 +13,8 @@ enum class TOPICS(override val topicId: Int, override val topicNameResId : Int) 
     MVVM_CONCEPTS(3, R.string.mvvm_jetpack),
     JSON_RETROFIT_CONCEPTS(4, R.string.json_retrofit),
     ROOM(5, R.string.room_database),
-    SHARED_PREFERENCE(6, R.string.shared_preferences)
+    SHARED_PREFERENCE(6, R.string.shared_preferences),
+    DATASTORE(7, R.string.datastore)
 }
 
 enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {

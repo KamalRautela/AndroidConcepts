@@ -24,6 +24,9 @@
             android:name=".sharedPreference.SharedPreferenceActivity"
             android:exported="false" />
         <activity
+            android:name=".datastore.DataStoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".room.TodoActivity"
             android:exported="false" />
         <activity
