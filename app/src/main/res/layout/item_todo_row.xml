@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_10"
+    app:cardBackgroundColor="@color/blue_0D1B2A"
+    app:cardCornerRadius="@dimen/spacing_12"
+    app:strokeColor="@color/blue_1B3A5C"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_12">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_10"
+            tools:checked="false" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTodoTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white_FFFFFF"
+            android:textSize="@dimen/text_size_14"
+            tools:text="Buy groceries" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeleteTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗑"
+            android:minWidth="0dp"
+            android:paddingHorizontal="@dimen/spacing_12"
+            android:textColor="@color/white_FFFFFF"
+            android:backgroundTint="@color/blue_1B3A5C"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

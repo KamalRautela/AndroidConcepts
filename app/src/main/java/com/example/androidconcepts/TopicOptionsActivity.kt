@@ -12,6 +12,8 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.MVVMConcepts
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityTopicOptionsBinding
+import com.example.androidconcepts.room.TodoActivity
+import com.example.androidconcepts.sharedPreference.SharedPreferenceActivity
 
 class TopicOptionsActivity : AppCompatActivity() {
 
@@ -56,6 +58,8 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.ACTIVITY_LIFECYCLE.topicId -> startActivity(Intent(this, ActivityLifecycleConceptsActivity::class.java))
             TOPICS.MVVM_CONCEPTS.topicId -> startActivity(Intent(this, MvvmConceptsActivity::class.java))
             TOPICS.JSON_RETROFIT_CONCEPTS.topicId -> startActivity(Intent(this, JsonParsingConceptsActivity::class.java))
+            TOPICS.ROOM.topicId -> startActivity(Intent(this, TodoActivity::class.java))
+            TOPICS.SHARED_PREFERENCE.topicId -> startActivity(Intent(this, SharedPreferenceActivity::class.java))
         }
     }
 }
