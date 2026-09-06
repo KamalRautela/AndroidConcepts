@@ -13,6 +13,7 @@ import com.example.androidconcepts.common.MVVMConcepts
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityTopicOptionsBinding
 import com.example.androidconcepts.datastore.DataStoreActivity
+import com.example.androidconcepts.navigation.NavigationActivity
 import com.example.androidconcepts.room.TodoActivity
 import com.example.androidconcepts.sharedPreference.SharedPreferenceActivity
 
@@ -62,6 +63,7 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.ROOM.topicId -> startActivity(Intent(this, TodoActivity::class.java))
             TOPICS.SHARED_PREFERENCE.topicId -> startActivity(Intent(this, SharedPreferenceActivity::class.java))
             TOPICS.DATASTORE.topicId -> startActivity(Intent(this, DataStoreActivity::class.java))
+            TOPICS.NAV_GRAPH.topicId -> startActivity(Intent(this, NavigationActivity::class.java))
         }
     }
 }

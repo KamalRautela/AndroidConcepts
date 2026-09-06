@@ -14,7 +14,8 @@ enum class TOPICS(override val topicId: Int, override val topicNameResId : Int) 
     JSON_RETROFIT_CONCEPTS(4, R.string.json_retrofit),
     ROOM(5, R.string.room_database),
     SHARED_PREFERENCE(6, R.string.shared_preferences),
-    DATASTORE(7, R.string.datastore)
+    DATASTORE(7, R.string.datastore),
+    NAV_GRAPH(8, R.string.nav_graph)
 }
 
 enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {

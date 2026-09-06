@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
+            android:name=".navigation.NavigationActivity"
+            android:exported="false" />
+        <activity
             android:name=".sharedPreference.SharedPreferenceActivity"
             android:exported="false" />
         <activity
