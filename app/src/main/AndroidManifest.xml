@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".AndroidConceptsApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -21,25 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".navigation.NavigationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".sharedPreference.SharedPreferenceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".datastore.DataStoreActivity"
-            android:exported="false" />
-        <activity
-            android:name=".room.TodoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".json_parsing.retrofit.put_api.RetrofitPutApiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".json_parsing.retrofit.delete_api.RetrofitDeleteApiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".json_parsing.retrofit.post_api.RetrofitPostActivity"
+            android:name=".HiltConceptsActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -193,6 +176,33 @@
             android:exported="false" />
         <activity
             android:name=".mvvm.mvvm_pattern.MvvmPatternsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".hilt.retrofit.CommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".hilt.room.AnimalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".navigation.NavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sharedPreference.SharedPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".datastore.DataStoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".room.TodoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".json_parsing.retrofit.put_api.RetrofitPutApiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".json_parsing.retrofit.delete_api.RetrofitDeleteApiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".json_parsing.retrofit.post_api.RetrofitPostActivity"
             android:exported="false" />
     </application>
 

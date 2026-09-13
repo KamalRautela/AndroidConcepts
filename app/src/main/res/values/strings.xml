@@ -68,6 +68,8 @@
     <string name="shared_preferences">SHARED PREFERENCES</string>
     <string name="datastore">DATASTORE</string>
     <string name="nav_graph">NAV GRAPH</string>
+    <string name="hilt">HILT</string>
+    <string name="retrofit">RETROFIT</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

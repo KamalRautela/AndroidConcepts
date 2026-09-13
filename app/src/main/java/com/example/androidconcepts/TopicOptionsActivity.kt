@@ -64,6 +64,7 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.SHARED_PREFERENCE.topicId -> startActivity(Intent(this, SharedPreferenceActivity::class.java))
             TOPICS.DATASTORE.topicId -> startActivity(Intent(this, DataStoreActivity::class.java))
             TOPICS.NAV_GRAPH.topicId -> startActivity(Intent(this, NavigationActivity::class.java))
+            TOPICS.HILT.topicId -> startActivity(Intent(this, HiltConceptsActivity::class.java))
         }
     }
 }

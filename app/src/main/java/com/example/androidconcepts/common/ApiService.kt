@@ -1,5 +1,6 @@
 package com.example.androidconcepts.common
 
+import com.example.androidconcepts.hilt.retrofit.Comment
 import com.example.androidconcepts.json_parsing.retrofit.get_api.Post
 import com.example.androidconcepts.json_parsing.retrofit.post_api.NewPost
 import retrofit2.http.Body
@@ -21,4 +22,7 @@ interface ApiService {
     suspend fun updatePost(@Path("id") id : Int,@Body post: Post) : Post
     @DELETE("posts/{id}")
     suspend fun deletePost(@Path("id") id : Int)
+
+    @GET("comments")
+    suspend fun getComments() : List<Comment>
 }
