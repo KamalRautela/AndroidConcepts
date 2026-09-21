@@ -22,8 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
-            android:name=".HiltConceptsActivity"
+            android:name=".ServicesConceptsActivity"
             android:exported="false" />
+
+        <service
+            android:name=".services.started_service.StartedService"
+            android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -203,6 +208,12 @@
             android:exported="false" />
         <activity
             android:name=".json_parsing.retrofit.post_api.RetrofitPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HiltConceptsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".services.started_service.StartedServiceActivity"
             android:exported="false" />
     </application>
 

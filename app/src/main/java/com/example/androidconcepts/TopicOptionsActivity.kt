@@ -65,6 +65,7 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.DATASTORE.topicId -> startActivity(Intent(this, DataStoreActivity::class.java))
             TOPICS.NAV_GRAPH.topicId -> startActivity(Intent(this, NavigationActivity::class.java))
             TOPICS.HILT.topicId -> startActivity(Intent(this, HiltConceptsActivity::class.java))
+            TOPICS.SERVICES.topicId -> startActivity(Intent(this, ServicesConceptsActivity::class.java))
         }
     }
 }
