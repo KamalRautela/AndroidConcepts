@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    tools:context=".services.started_service.StartedServiceActivity">
+    tools:context=".services.foreground_service.ForegroundServiceActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/blue_0D1B2A"
         android:padding="@dimen/spacing_8"
-        app:title="Started Service"
+        app:title="Foreground Service"
         app:titleTextColor="@color/blue_7EC8E3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Start Service"
+                            android:text="Start Foreground"
                             android:textColor="@color/black_080D14"
                             android:backgroundTint="@color/blue_0099CC"
                             android:stateListAnimator="@null"
@@ -122,7 +122,7 @@
                         android:id="@+id/tvInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1. Android Studio ke Logcat mein tag STARTED SERVICE se filter karo\n2. 'Start Service' dabao: onCreate → onStartCommand → 5 tasks → onDestroy\n3. Tasks ke beech mein 'Stop Service' dabao: tasks ruk jaayenge\n4. 'Start Service' ko 2 baar jaldi dabao: onCreate ek baar, onStartCommand do baar (startId 1, 2)"
+                        android:text="1. 'Start Foreground' dabao, notification permission allow karo\n2. Notification aayegi, progress 1/10 se 10/10 tak badhega\n3. Home dabao — notification chalti rahegi\n4. Kaam khatam hone pe, ya 'Stop Service' dabane pe notification hat jaayegi\n5. Permission deny karke bhi try karo — service chalegi (Logcat mein dekho) lekin notification nahi dikhegi"
                         tools:ignore="HardcodedText"
                         android:textColor="@color/blue_7EC8E3"
                         android:textSize="@dimen/text_size_12"

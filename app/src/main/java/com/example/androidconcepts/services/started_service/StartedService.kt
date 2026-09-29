@@ -30,7 +30,7 @@ class StartedService : Service() {
             }
             stopSelf(startId)
         }
-        return START_NOT_STICKY
+        return START_STICKY
     }
 
     override fun onDestroy() {

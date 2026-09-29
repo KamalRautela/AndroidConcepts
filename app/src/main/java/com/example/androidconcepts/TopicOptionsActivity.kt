@@ -9,7 +9,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidconcepts.common.TOPICS
 import com.example.androidconcepts.common.ConceptAdapter
-import com.example.androidconcepts.common.MVVMConcepts
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityTopicOptionsBinding
 import com.example.androidconcepts.datastore.DataStoreActivity

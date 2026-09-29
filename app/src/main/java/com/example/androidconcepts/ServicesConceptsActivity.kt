@@ -11,6 +11,7 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.SERVICE
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityServicesConceptsBinding
+import com.example.androidconcepts.services.foreground_service.ForegroundServiceActivity
 import com.example.androidconcepts.services.started_service.StartedServiceActivity
 
 class ServicesConceptsActivity : AppCompatActivity() {
@@ -59,6 +60,7 @@ class ServicesConceptsActivity : AppCompatActivity() {
     private fun navigateToTopic(topicId : Int) {
         when(topicId) {
             SERVICE.STARTED_SERVICE.topicId -> startActivity(Intent(this@ServicesConceptsActivity, StartedServiceActivity::class.java))
+            SERVICE.FOREGROUND_SERVICE.topicId -> startActivity(Intent(this@ServicesConceptsActivity, ForegroundServiceActivity::class.java))
         }
     }
 }

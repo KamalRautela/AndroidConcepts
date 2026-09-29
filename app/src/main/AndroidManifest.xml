@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".AndroidConceptsApp"
@@ -22,12 +25,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
+            android:name=".services.foreground_service.ForegroundServiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".ServicesConceptsActivity"
             android:exported="false" />
 
         <service
             android:name=".services.started_service.StartedService"
             android:exported="false" />
+        <service
+            android:name=".services.foreground_service.ForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
 
         <activity
             android:name=".SplashActivity"

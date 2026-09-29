@@ -72,6 +72,7 @@
     <string name="retrofit">RETROFIT</string>
     <string name="services">SERVICES</string>
     <string name="started_service">STARTED SERVICE</string>
+    <string name="foreground_service">FOREGROUND SERVICE</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

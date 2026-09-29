@@ -80,7 +80,8 @@ enum class JSON_RETROFIT(override val topicId: Int, override val topicNameResId:
 }
 
 enum class SERVICE(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
-    STARTED_SERVICE(1,R.string.started_service)
+    STARTED_SERVICE(1,R.string.started_service),
+    FOREGROUND_SERVICE(2,R.string.foreground_service)
 }
 
 enum class HILT(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
