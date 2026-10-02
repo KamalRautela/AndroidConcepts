@@ -24,13 +24,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
-        <activity
-            android:name=".services.foreground_service.ForegroundServiceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ServicesConceptsActivity"
-            android:exported="false" />
-
         <service
             android:name=".services.started_service.StartedService"
             android:exported="false" />
@@ -38,6 +31,9 @@
             android:name=".services.foreground_service.ForegroundService"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
+        <service
+            android:name=".services.bound_service.BoundService"
+            android:exported="false" />
 
         <activity
             android:name=".SplashActivity"
@@ -223,7 +219,16 @@
             android:name=".HiltConceptsActivity"
             android:exported="false" />
         <activity
+            android:name=".ServicesConceptsActivity"
+            android:exported="false" />
+        <activity
             android:name=".services.started_service.StartedServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".services.foreground_service.ForegroundServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".services.bound_service.BoundServiceActivity"
             android:exported="false" />
     </application>
 

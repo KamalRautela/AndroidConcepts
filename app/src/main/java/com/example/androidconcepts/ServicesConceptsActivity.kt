@@ -11,6 +11,7 @@ import com.example.androidconcepts.common.ConceptAdapter
 import com.example.androidconcepts.common.SERVICE
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityServicesConceptsBinding
+import com.example.androidconcepts.services.bound_service.BoundServiceActivity
 import com.example.androidconcepts.services.foreground_service.ForegroundServiceActivity
 import com.example.androidconcepts.services.started_service.StartedServiceActivity
 
@@ -61,6 +62,7 @@ class ServicesConceptsActivity : AppCompatActivity() {
         when(topicId) {
             SERVICE.STARTED_SERVICE.topicId -> startActivity(Intent(this@ServicesConceptsActivity, StartedServiceActivity::class.java))
             SERVICE.FOREGROUND_SERVICE.topicId -> startActivity(Intent(this@ServicesConceptsActivity, ForegroundServiceActivity::class.java))
+            SERVICE.BOUND_SERVICE.topicId -> startActivity(Intent(this@ServicesConceptsActivity, BoundServiceActivity::class.java))
         }
     }
 }
