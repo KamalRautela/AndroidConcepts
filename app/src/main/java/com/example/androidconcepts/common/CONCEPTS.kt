@@ -17,7 +17,8 @@ enum class TOPICS(override val topicId: Int, override val topicNameResId : Int) 
     DATASTORE(7, R.string.datastore),
     NAV_GRAPH(8, R.string.nav_graph),
     HILT(9,R.string.hilt),
-    SERVICES(10,R.string.services)
+    SERVICES(10,R.string.services),
+    BROADCAST_RECEIVER(11,R.string.broadcast_receiver)
 }
 
 enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
@@ -88,4 +89,9 @@ enum class SERVICE(override val topicId: Int, override val topicNameResId: Int) 
 enum class HILT(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
     RETROFIT(1,R.string.retrofit),
     ROOM(2,R.string.room_database)
+}
+
+enum class BROADCAST_RECEIVER(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {
+    STATIC_RECEIVER(1,R.string.static_receiver),
+    DYNAMIC_RECEIVER(2,R.string.dynamic_receiver)
 }

@@ -74,6 +74,9 @@
     <string name="started_service">STARTED SERVICE</string>
     <string name="foreground_service">FOREGROUND SERVICE</string>
     <string name="bound_service">BOUND SERVICE</string>
+    <string name="broadcast_receiver">BROADCAST RECEIVER</string>
+    <string name="static_receiver">STATIC RECEIVER</string>
+    <string name="dynamic_receiver">DYNAMIC RECEIVER</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

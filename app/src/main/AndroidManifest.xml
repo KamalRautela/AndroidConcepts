@@ -24,6 +24,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
+        <activity
+            android:name=".broadcast_receiver.dynamic_broadcast_receiver.DynamicBroadcastReceiverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BroadcastReceiverConceptsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".broadcast_receiver.static_broadcast_receiver.StaticBroadcastReceiverActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".broadcast_receiver.static_broadcast_receiver.StaticReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.androidconcepts.SEND_PING" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name=".services.started_service.StartedService"
             android:exported="false" />

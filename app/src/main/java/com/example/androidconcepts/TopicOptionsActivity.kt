@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.androidconcepts.common.TOPICS
 import com.example.androidconcepts.common.ConceptAdapter
+import com.example.androidconcepts.common.TOPICS
 import com.example.androidconcepts.common.setDynamicSpacing
 import com.example.androidconcepts.databinding.ActivityTopicOptionsBinding
 import com.example.androidconcepts.datastore.DataStoreActivity
@@ -65,6 +65,7 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.NAV_GRAPH.topicId -> startActivity(Intent(this, NavigationActivity::class.java))
             TOPICS.HILT.topicId -> startActivity(Intent(this, HiltConceptsActivity::class.java))
             TOPICS.SERVICES.topicId -> startActivity(Intent(this, ServicesConceptsActivity::class.java))
+            TOPICS.BROADCAST_RECEIVER.topicId -> startActivity(Intent(this, BroadcastReceiverConceptsActivity::class.java))
         }
     }
 }
