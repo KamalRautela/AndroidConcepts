@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcepts">
         <activity
+            android:name=".workManager.WorkManagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".broadcast_receiver.dynamic_broadcast_receiver.DynamicBroadcastReceiverActivity"
             android:exported="false" />
         <activity

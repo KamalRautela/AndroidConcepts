@@ -18,7 +18,8 @@ enum class TOPICS(override val topicId: Int, override val topicNameResId : Int) 
     NAV_GRAPH(8, R.string.nav_graph),
     HILT(9,R.string.hilt),
     SERVICES(10,R.string.services),
-    BROADCAST_RECEIVER(11,R.string.broadcast_receiver)
+    BROADCAST_RECEIVER(11,R.string.broadcast_receiver),
+    WORK_MANAGER(12,R.string.work_manager)
 }
 
 enum class UiBASICS(override val topicId: Int, override val topicNameResId: Int) : CONCEPTS {

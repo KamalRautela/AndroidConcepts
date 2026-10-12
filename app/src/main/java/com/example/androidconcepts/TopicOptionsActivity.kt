@@ -15,6 +15,7 @@ import com.example.androidconcepts.datastore.DataStoreActivity
 import com.example.androidconcepts.navigation.NavigationActivity
 import com.example.androidconcepts.room.TodoActivity
 import com.example.androidconcepts.sharedPreference.SharedPreferenceActivity
+import com.example.androidconcepts.workManager.WorkManagerActivity
 
 class TopicOptionsActivity : AppCompatActivity() {
 
@@ -66,6 +67,7 @@ class TopicOptionsActivity : AppCompatActivity() {
             TOPICS.HILT.topicId -> startActivity(Intent(this, HiltConceptsActivity::class.java))
             TOPICS.SERVICES.topicId -> startActivity(Intent(this, ServicesConceptsActivity::class.java))
             TOPICS.BROADCAST_RECEIVER.topicId -> startActivity(Intent(this, BroadcastReceiverConceptsActivity::class.java))
+            TOPICS.WORK_MANAGER.topicId -> startActivity(Intent(this, WorkManagerActivity::class.java))
         }
     }
 }
